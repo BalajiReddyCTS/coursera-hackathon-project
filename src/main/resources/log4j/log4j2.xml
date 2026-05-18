@@ -15,7 +15,7 @@
         <!-- ===== Console Appender: logs to terminal during test run ===== -->
         <Console name="ConsoleAppender" target="SYSTEM_OUT">
             <PatternLayout
-                pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+                    pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
             <!--
               Pattern breakdown:
               %d{HH:mm:ss.SSS} = timestamp
@@ -31,7 +31,7 @@
                      fileName="logs/automation.log"
                      filePattern="logs/automation-%d{yyyy-MM-dd}-%i.log.gz">
             <PatternLayout
-                pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+                    pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
             <!-- Roll when file exceeds 10MB, keep last 10 files -->
             <Policies>
                 <TimeBasedTriggeringPolicy />

@@ -1,4 +1,8 @@
-stepdefinitions\EnterpriseFormSteps.class
-runners\TestRunner.class
-stepdefinitions\LanguageLearningSteps.class
-stepdefinitions\CourseSearchSteps.class
+com\hackthonProject\stepdefinitions\CourseSearchSteps.class
+com\hackthonProject\stepdefinitions\EnterpriseFormSteps.class
+com\hackthonProject\stepdefinitions\LanguageLearningSteps.class
+com\hackathonProject\stepdefinitions\CourseSearchSteps.class
+com\hackthonProject\runners\TestRunner.class
+com\hackathonProject\stepdefinitions\LanguageLearningSteps.class
+com\hackathonProject\stepdefinitions\EnterpriseFormSteps.class
+com\hackathonProject\runners\TestRunner.class

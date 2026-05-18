@@ -28,7 +28,7 @@
 
     <test name="CourseraTests" preserve-order="true">
         <classes>
-            <class name="runners.TestRunner"/>
+            <class name="com.hackathonProject.runners.TestRunner"/>
         </classes>
     </test>
 
