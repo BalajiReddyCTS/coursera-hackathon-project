@@ -10,26 +10,10 @@ import com.hackathonProject.base.BaseClass;
 import com.hackathonProject.utils.ExtentReportManager;
 import com.hackathonProject.utils.ScreenshotUtil;
 
-/**
- * CucumberHooks - runs setup/teardown code before and after each Scenario.
- *
- * @Before → launches browser
- * @After  → takes screenshot on failure, then quits browser
- *
- * Cucumber automatically discovers this class because it's in the
- * "glue" package path configured in TestRunner.
- */
 public class CucumberHooks {
 
     private static final Logger logger = LogManager.getLogger(CucumberHooks.class);
 
-    /**
-     * @Before runs ONCE before each Cucumber scenario.
-     * Creates a fresh browser session for every test.
-     *
-     * NOTE: In parallel execution, each thread calls this independently,
-     * creating its own browser via ThreadLocal (see BaseClass).
-     */
     @Before
     public void setUp(Scenario scenario) {
         logger.info("====== SCENARIO STARTED: " + scenario.getName() + " ======");
@@ -38,17 +22,13 @@ public class CucumberHooks {
         // Launch browser (reads 'browser' from config.properties)
         BaseClass.createDriver();
 
-        // Initialise Extent Report test node for this scenario
+        // Initialize Extent Report test node for this scenario
         ExtentReportManager.createTest(scenario.getName());
         ExtentReportManager.logInfo("Browser launched for scenario: " + scenario.getName());
 
         logger.info("Browser launched successfully");
     }
 
-    /**
-     * @After runs ONCE after each Cucumber scenario (pass or fail).
-     * Takes screenshot on failure, then always closes the browser.
-     */
     @After
     public void tearDown(Scenario scenario) {
         logger.info("====== SCENARIO FINISHED: " + scenario.getName()

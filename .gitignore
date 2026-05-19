@@ -1,9 +1,6 @@
 .idea
-
 .settings
-
+.eclipse
 .classpath
-
 .project
-
-
+.env

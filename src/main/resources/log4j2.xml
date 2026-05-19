@@ -1,38 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  log4j2.xml - Logging configuration for the framework.
 
-  LOG LEVELS (low to high):
-  TRACE → DEBUG → INFO → WARN → ERROR → FATAL
-
-  Setting level=INFO means: INFO, WARN, ERROR, FATAL are logged.
-  DEBUG and TRACE are ignored (too verbose for normal runs).
--->
 <Configuration status="WARN">
 
     <Appenders>
 
-        <!-- ===== Console Appender: logs to terminal during test run ===== -->
+       
         <Console name="ConsoleAppender" target="SYSTEM_OUT">
             <PatternLayout
                 pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-            <!--
-              Pattern breakdown:
-              %d{HH:mm:ss.SSS} = timestamp
-              [%t]             = thread name (useful for parallel runs)
-              %-5level         = log level, left-padded to 5 chars
-              %logger{36}      = class name (max 36 chars)
-              %msg%n           = the actual message + newline
-            -->
+            
         </Console>
 
-        <!-- ===== File Appender: saves all logs to a rolling file ===== -->
+       
         <RollingFile name="FileAppender"
                      fileName="logs/automation.log"
                      filePattern="logs/automation-%d{yyyy-MM-dd}-%i.log.gz">
             <PatternLayout
                 pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-            <!-- Roll when file exceeds 10MB, keep last 10 files -->
+           
             <Policies>
                 <TimeBasedTriggeringPolicy />
                 <SizeBasedTriggeringPolicy size="10MB"/>
@@ -43,18 +28,18 @@
     </Appenders>
 
     <Loggers>
-        <!-- Root logger: catches everything not caught by specific loggers -->
+      
         <Root level="INFO">
             <AppenderRef ref="ConsoleAppender"/>
             <AppenderRef ref="FileAppender"/>
         </Root>
 
-        <!-- Reduce Selenium's own verbose logging -->
+       
         <Logger name="org.openqa.selenium" level="WARN" additivity="false">
             <AppenderRef ref="ConsoleAppender"/>
         </Logger>
 
-        <!-- Reduce WebDriverManager verbose logging -->
+      
         <Logger name="io.github.bonigarcia" level="WARN" additivity="false">
             <AppenderRef ref="ConsoleAppender"/>
         </Logger>

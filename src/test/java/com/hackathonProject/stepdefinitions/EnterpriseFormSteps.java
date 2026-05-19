@@ -84,41 +84,23 @@ public class EnterpriseFormSteps {
     public void theErrorMessageShouldContain(String expectedText) {
         logger.info("STEP: Asserting error message contains: " + expectedText);
 
-        softAssert.assertNotNull(capturedErrorMessage,
-            "capturedErrorMessage is null — previous step may have failed");
+        softAssert.assertNotNull(capturedErrorMessage, "Error message is null");
 
         if (capturedErrorMessage != null) {
-            String errorLower = capturedErrorMessage.toLowerCase();
-
-            boolean containsExpected = errorLower.contains(expectedText.toLowerCase());
-            boolean isValidationError = containsExpected
-                || errorLower.contains("valid email")
-                || errorLower.contains("required")
-                || errorLower.contains("invalid")
-                || errorLower.contains("must be")
-                || errorLower.contains("please enter")
-                || errorLower.contains("email")
-                || errorLower.contains("validation");
-
-            if (containsExpected) {
-                ExtentReportManager.logPass(
-                    "Error message contains '" + expectedText + "'. Full: " + capturedErrorMessage);
-                logger.info("Assertion PASSED (exact match): " + capturedErrorMessage);
-            } else if (isValidationError) {
-                ExtentReportManager.logPass(
-                    "Validation error detected. Expected: '" + expectedText + "', Actual: '" + capturedErrorMessage + "'");
-                logger.info("Assertion PASSED (validation error): " + capturedErrorMessage);
+            boolean matches = capturedErrorMessage.toLowerCase().contains(expectedText.toLowerCase());
+            
+            if (matches) {
+                ExtentReportManager.logPass("Error contains '" + expectedText + "': " + capturedErrorMessage);
+                logger.info("Assertion PASSED: " + capturedErrorMessage);
             } else {
-                ExtentReportManager.logFail(
-                    "Expected '" + expectedText + "' but got: " + capturedErrorMessage);
+                ExtentReportManager.logFail("Expected '" + expectedText + "' but got: " + capturedErrorMessage);
                 logger.error("Assertion FAILED. Expected: " + expectedText + " | Actual: " + capturedErrorMessage);
             }
 
-            softAssert.assertTrue(isValidationError,
-                "Error '" + capturedErrorMessage + "' does not indicate validation error. Expected: '" + expectedText + "'");
+            softAssert.assertTrue(matches,
+                "Expected error to contain '" + expectedText + "' but got: " + capturedErrorMessage);
         }
 
-        // Collect all soft assertion failures at the end
         softAssert.assertAll();
     }
 }

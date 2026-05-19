@@ -14,9 +14,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * ExcelDataWriter - writes course data to a plain .xlsx file using Apache POI.
- */
 public class ExcelDataWriter {
 
     private static final Logger logger = LogManager.getLogger(ExcelDataWriter.class);

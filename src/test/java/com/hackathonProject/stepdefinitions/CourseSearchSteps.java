@@ -118,7 +118,6 @@ public class CourseSearchSteps {
             logger.info("First course name: " + firstName);
         }
 
-        // Collect all soft assertion failures at the end
         softAssert.assertAll();
     }
 }

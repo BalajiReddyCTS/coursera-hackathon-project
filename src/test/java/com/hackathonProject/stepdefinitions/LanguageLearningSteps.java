@@ -51,7 +51,7 @@ public class LanguageLearningSteps {
 
         logger.info(sb.toString());
         ExtentReportManager.logInfo(sb.toString());
-        System.out.println(sb);
+
     }
 
     @When("the user opens the level filter dropdown")
@@ -75,7 +75,7 @@ public class LanguageLearningSteps {
 
         logger.info(sb.toString());
         ExtentReportManager.logInfo(sb.toString());
-        System.out.println(sb);
+
     }
 
     @Then("the language list should contain at least {int} languages")
@@ -111,7 +111,7 @@ public class LanguageLearningSteps {
         softAssert.assertTrue(actual >= minimum,
             "Expected >= " + minimum + " levels but found " + actual);
 
-        // Collect all soft assertion failures at the end of this scenario
+
         softAssert.assertAll();
     }
 }

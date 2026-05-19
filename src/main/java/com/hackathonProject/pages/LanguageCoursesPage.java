@@ -1,223 +1,141 @@
 package com.hackathonProject.pages;
 
+import com.hackathonProject.base.BaseClass;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
-
-import com.hackathonProject.base.BaseClass;
 import com.hackathonProject.utils.JavaScriptUtil;
 import com.hackathonProject.utils.WaitUtil;
 
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class LanguageCoursesPage {
 
     private static final Logger logger = LogManager.getLogger(LanguageCoursesPage.class);
-    private WebDriver driver;
+    private static final String PAGE_URL = "https://www.coursera.org/courses?query=language+learning";
+    private static final Pattern NAME_COUNT = Pattern.compile("^(.+?)\\s*\\(([\\d,]+)\\)");
+    private static final Set<String> KNOWN_LEVELS = Set.of("Beginner", "Intermediate", "Advanced", "Mixed");
 
-    private static final Set<String> KNOWN_LEVELS = new HashSet<>(Arrays.asList(
-        "Beginner", "Intermediate", "Advanced", "Mixed"
-    ));
+    private static final By LANGUAGE_SECTION = By.xpath("//button[normalize-space(.)='Language']");
+    private static final By LEVEL_SECTION = By.xpath("//button[normalize-space(.)='Level']");
+    private static final By FILTER_SORT_BTN = By.xpath("//button[contains(.,'Filter')]");
+    private static final By FILTER_LABELS = By.xpath("//label[.//input[@type='checkbox']]");
+    private static final By VISIBLE_LABEL = By.xpath("//label[contains(text(),'(')]");
+    private static final By SHOW_MORE_BTN = By.xpath("//button[contains(.,'Show more')]");
+    private static final By CLOSE_POPUP = By.xpath("//button[@aria-label='Close']");
+
+    private WebDriver driver;
 
     public LanguageCoursesPage() {
         this.driver = BaseClass.getDriver();
-        PageFactory.initElements(driver, this);
     }
 
     public void navigateToLanguageLearning() {
-        driver.get("https://www.coursera.org/courses?query=language+learning");
+        driver.get(PAGE_URL);
         WaitUtil.waitForPageLoad(driver);
-        dismissPopups();
+        dismissPopup();
     }
 
     public Map<String, Integer> extractAllLanguages() {
         logger.info("Extracting all language filter options");
-        Map<String, Integer> languageMap = new LinkedHashMap<>();
+        Map<String, Integer> map = new LinkedHashMap<>();
 
-        try {
-            openFilterPanel();
-            if (!clickSectionButton("Language")) return languageMap;
-            WaitUtil.briefPause(driver, 1500);
-            clickShowMore();
-            WaitUtil.briefPause(driver, 1000);
+        openFilterPanel();
+        if (!clickSection(LANGUAGE_SECTION, "Language")) return map;
+        clickShowMore();
 
-            for (String[] entry : extractVisibleFilterEntries()) {
-                if (!isLevelEntry(entry[0])) languageMap.put(entry[0], Integer.parseInt(entry[1]));
-            }
-            logger.info("Total languages: " + languageMap.size());
-        } catch (Exception e) {
-            logger.error("Failed to extract languages", e);
+        for (String[] entry : getFilterEntries()) {
+            if (!isLevel(entry[0])) map.put(entry[0], Integer.parseInt(entry[1]));
         }
-        return languageMap;
+        logger.info("Total languages: " + map.size());
+        return map;
     }
 
     public Map<String, Integer> extractAllLevels() {
         logger.info("Extracting all level filter options");
-        Map<String, Integer> levelMap = new LinkedHashMap<>();
+        Map<String, Integer> map = new LinkedHashMap<>();
 
-        try {
-            // Reload for clean state
-            driver.get("https://www.coursera.org/courses?query=language+learning");
-            WaitUtil.waitForPageLoad(driver);
-            dismissPopups();
+        // Full reload for clean filter state
+        driver.navigate().to(PAGE_URL);
+        WaitUtil.waitForPageLoad(driver);
+        dismissPopup();
 
-            openFilterPanel();
-            if (!clickSectionButton("Level")) {
-                return extractLevelsFallback();
+        openFilterPanel();
+        if (!clickSection(LEVEL_SECTION, "Level")) return map;
+
+        for (String[] entry : getFilterEntries()) {
+            if (isLevel(entry[0])) {
+                map.put(entry[0], Integer.parseInt(entry[1]));
+                logger.info("Level: " + entry[0] + " → " + entry[1]);
             }
-            WaitUtil.briefPause(driver, 1500);
-
-            for (String[] entry : extractVisibleFilterEntries()) {
-                if (isLevelEntry(entry[0])) {
-                    levelMap.put(entry[0], Integer.parseInt(entry[1]));
-                    logger.info("Level: " + entry[0] + " → " + entry[1]);
-                }
-            }
-
-            if (levelMap.isEmpty()) levelMap = extractLevelsFallback();
-        } catch (Exception e) {
-            logger.error("Failed to extract levels", e);
         }
-        logger.info("Total levels: " + levelMap.size());
-        return levelMap;
+        logger.info("Total levels: " + map.size());
+        return map;
     }
 
     private void openFilterPanel() {
-        // Check if already open
-        try {
-            List<WebElement> sections = driver.findElements(
-                By.xpath("//button[normalize-space(.)='Language'] | //button[normalize-space(.)='Level']"));
-            for (WebElement s : sections) { if (s.isDisplayed()) return; }
-        } catch (Exception ignored) {}
+        if (WaitUtil.waitForElement(driver, LANGUAGE_SECTION, 3) != null) return;
 
-        WebElement filterBtn = WaitUtil.waitForAnyElement(driver, 8,
-            By.xpath("//button[contains(.,'Filter') and contains(.,'Sort')]"),
-            By.xpath("//button[contains(.,'Filters')]"));
+        WebElement filterBtn = WaitUtil.waitForElement(driver, FILTER_SORT_BTN, 8);
         if (filterBtn != null) {
             JavaScriptUtil.scrollAndClick(driver, filterBtn);
-            // Wait for the panel sections to appear
-            WaitUtil.waitForAnyElement(driver, 5,
-                By.xpath("//button[normalize-space(.)='Language']"),
-                By.xpath("//button[normalize-space(.)='Level']"));
+            WaitUtil.waitForElement(driver, LANGUAGE_SECTION, 5);
             logger.info("Opened Filter panel");
         }
     }
 
-    private boolean clickSectionButton(String name) {
-        String[] xpaths = {
-            "//button[normalize-space(.)='" + name + "']",
-            "//button[contains(.,'" + name + "') and not(contains(.,'Filter'))]",
-            "//span[text()='" + name + "']/ancestor::button"
-        };
-        for (String xpath : xpaths) {
-            try {
-                List<WebElement> btns = driver.findElements(By.xpath(xpath));
-                for (WebElement btn : btns) {
-                    if (btn.isDisplayed() && !btn.getText().contains("Filter & Sort")) {
-                        JavaScriptUtil.scrollAndClick(driver, btn);
-                        logger.info("Clicked '" + name + "' section");
-                        // Wait for labels to appear
-                        WaitUtil.waitForElement(driver, By.xpath("//label[contains(text(),'(')]"), 5);
-                        return true;
-                    }
-                }
-            } catch (Exception ignored) {}
+    private boolean clickSection(By locator, String name) {
+        WebElement btn = WaitUtil.waitForElement(driver, locator, 5);
+
+        if (btn == null || btn.getText().contains("Filter")) {
+            logger.warn("'" + name + "' section not found");
+            return false;
         }
-        logger.warn("'" + name + "' section not found");
-        return false;
+
+        JavaScriptUtil.scrollAndClick(driver, btn);
+        WaitUtil.waitForElement(driver, VISIBLE_LABEL, 5);
+        logger.info("Clicked '" + name + "' section");
+        return true;
     }
 
     private void clickShowMore() {
-        try {
-            List<WebElement> btns = driver.findElements(By.xpath("//button[contains(.,'Show more')]"));
-            for (WebElement btn : btns) {
-                if (btn.isDisplayed()) {
-                    JavaScriptUtil.scrollAndClick(driver, btn);
-                    WaitUtil.briefPause(driver, 1000);
-                    return;
-                }
-            }
-        } catch (Exception ignored) {}
+        WebElement btn = WaitUtil.waitForElement(driver, SHOW_MORE_BTN, 3);
+        if (btn != null) JavaScriptUtil.scrollAndClick(driver, btn);
     }
 
-    private List<String[]> extractVisibleFilterEntries() {
+    private List<String[]> getFilterEntries() {
         List<String[]> results = new ArrayList<>();
-        List<WebElement> labels = new ArrayList<>();
-
-        for (String xpath : new String[]{"//label[.//input[@type='checkbox']]", "//label[contains(text(),'(')]"}) {
-            try {
-                for (WebElement el : driver.findElements(By.xpath(xpath))) {
-                    if (el.isDisplayed()) {
-                        String text = getElementText(el);
-                        if (!text.isEmpty() && text.contains("(")) labels.add(el);
-                    }
-                }
-                if (labels.size() >= 2) break;
-            } catch (Exception ignored) {}
-        }
-
         Set<String> seen = new HashSet<>();
-        for (WebElement label : labels) {
-            String[] parsed = parseNameAndCount(getElementText(label));
-            if (parsed[0] != null && !parsed[0].isEmpty() && seen.add(parsed[0])) {
-                results.add(parsed);
+
+        for (WebElement label : driver.findElements(FILTER_LABELS)) {
+            if (!label.isDisplayed()) continue;
+            String text = label.getText().trim();
+            if (text.isEmpty() || !text.contains("(")) continue;
+
+            Matcher m = NAME_COUNT.matcher(text.replaceAll("[\\r\\n]+", " ").trim());
+            if (m.find()) {
+                String name = m.group(1).trim();
+                if (!name.isEmpty() && seen.add(name)) {
+                    results.add(new String[]{name, m.group(2).replace(",", "")});
+                }
             }
         }
         return results;
     }
 
-    private boolean isLevelEntry(String name) {
-        if (name == null) return false;
-        for (String level : KNOWN_LEVELS) {
-            if (name.trim().equalsIgnoreCase(level) || name.trim().toLowerCase().startsWith(level.toLowerCase()))
-                return true;
-        }
-        return false;
+    private boolean isLevel(String name) {
+        return name != null && KNOWN_LEVELS.stream()
+            .anyMatch(l -> name.trim().equalsIgnoreCase(l));
     }
 
-    private Map<String, Integer> extractLevelsFallback() {
-        Map<String, Integer> map = new LinkedHashMap<>();
-        for (String level : new String[]{"Beginner", "Intermediate", "Advanced", "Mixed"}) {
-            try {
-                for (WebElement el : driver.findElements(
-                    By.xpath("//*[contains(text(),'" + level + "') and contains(text(),'(')]"))) {
-                    if (el.isDisplayed()) {
-                        String[] parsed = parseNameAndCount(getElementText(el));
-                        if (parsed[0] != null && isLevelEntry(parsed[0])) {
-                            map.put(parsed[0], Integer.parseInt(parsed[1]));
-                            break;
-                        }
-                    }
-                }
-            } catch (Exception ignored) {}
-        }
-        return map;
-    }
-
-    private String getElementText(WebElement el) {
-        try { String t = el.getText().trim(); if (!t.isEmpty()) return t; } catch (Exception ignored) {}
+    private void dismissPopup() {
         try {
-            return ((String) ((JavascriptExecutor) driver).executeScript("return arguments[0].innerText;", el)).trim();
+            WebElement btn = driver.findElement(CLOSE_POPUP);
+            if (btn.isDisplayed()) btn.click();
         } catch (Exception ignored) {}
-        return "";
-    }
-
-    private String[] parseNameAndCount(String text) {
-        text = text.replaceAll("[\\r\\n]+", " ").trim();
-        java.util.regex.Matcher m = java.util.regex.Pattern.compile("^(.+?)\\s*\\(([\\d,]+)\\)").matcher(text);
-        if (m.find()) return new String[]{m.group(1).trim(), m.group(2).replace(",", "")};
-        return new String[]{null, "0"};
-    }
-
-    private void dismissPopups() {
-        for (String xpath : new String[]{"//button[@aria-label='Close']", "//button[@id='onetrust-accept-btn-handler']"}) {
-            try {
-                for (WebElement btn : driver.findElements(By.xpath(xpath))) { if (btn.isDisplayed()) btn.click(); }
-            } catch (Exception ignored) {}
-        }
     }
 }
