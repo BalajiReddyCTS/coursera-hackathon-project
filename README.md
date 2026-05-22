@@ -1,6 +1,6 @@
 # CourseraAutomation — BDD Selenium Framework
 
-A beginner-friendly BDD automation project using Cucumber + Selenium + TestNG.
+A Selenium + Cucumber BDD + TestNG automation framework for Coursera.org, with parallel execution, cross-browser support, and triple reporting (Cucumber HTML, Extent, Allure).
 
 ---
 
@@ -10,35 +10,41 @@ A beginner-friendly BDD automation project using Cucumber + Selenium + TestNG.
 
 | Flow | Description |
 |------|-------------|
-| **Flow 1** | Search for "web development courses for beginners" → filter English + Beginner → extract first **10** courses (name, hours, rating) → save to **Excel** |
-| **Flow 2** | Navigate to Language Learning → open Language filter → extract **all languages with counts** → extract **all levels with counts** |
-| **Flow 3** | Go to Coursera For Business → fill "Ready to learn more?" contact form → enter **invalid email** → capture and assert the error message |
+| **Flow 1 – Course Search** | Search for "web development courses for beginners" → apply English + Beginner filters → extract the first **5** courses (name, learning hours, rating) → save to `CourseData.xlsx` via Apache POI |
+| **Flow 2 – Language Learning** | Navigate to the Language Learning category → open the Language filter and capture every language with its course count → reload, open the Level filter, capture every level (Beginner / Intermediate / Advanced / Mixed) with counts |
+| **Flow 3 – Enterprise Form** | Go to Coursera For Business → scroll to the Marketo "Ready to learn more?" form → fill First Name, Last Name and an **invalid email** (no `@`) → tab out → submit → assert the validation error contains "valid email" |
+
+All three scenarios are tagged `@Smoke`, and `TestRunner` filters on that tag.
 
 ---
 
 ## Tech Stack
 
-| Tool | Purpose |
-|------|---------|
-| Java 11 | Programming language |
-| Maven | Build & dependency management |
-| Selenium 4 | Browser automation |
-| WebDriverManager | Auto-downloads chromedriver/geckodriver |
-| Cucumber 7 (BDD) | Given/When/Then test scenarios |
-| TestNG | Test runner, parallel execution, assertions |
-| Apache POI | Read/write Excel files |
-| Extent Reports | Custom HTML test report |
-| Allure | Rich visual HTML report |
-| Log4j2 | Logging to console and file |
+| Tool | Version | Purpose |
+|------|---------|---------|
+| Java | 11 | Language / compile target |
+| Maven | 3.6+ | Build & dependency management |
+| Selenium WebDriver | 4.18.1 | Browser automation |
+| WebDriverManager | 5.7.0 | Auto-downloads Chrome/Firefox drivers |
+| Selenium Manager | built-in | Auto-manages the Edge driver |
+| TestNG | 7.9.0 | Test runner, parallel threads, soft asserts |
+| Cucumber | 7.15.0 | BDD framework + Gherkin |
+| Cucumber TestNG | 7.15.0 | Cucumber–TestNG bridge |
+| Apache POI | 5.2.5 | Excel `.xlsx` read/write |
+| ExtentReports | 5.1.1 | HTML test report with dashboard |
+| extentreports-cucumber7-adapter | 1.14.0 | Auto-wires Extent to Cucumber events |
+| Allure | 2.25.0 | Interactive HTML report (`allure-cucumber7-jvm`) |
+| Log4j2 | 2.22.0 | Logging to console + rolling file |
+| Commons IO | 2.15.1 | File copy helpers for screenshots |
 
 ---
 
 ## Prerequisites
 
-- Java 11+ installed (`java -version`)
-- Maven 3.6+ installed (`mvn -version`)
-- Chrome browser installed
-- Internet connection (tests run against live Coursera site)
+- Java 11+ (`java -version`)
+- Maven 3.6+ (`mvn -version`)
+- Chrome **or** Microsoft Edge installed (Edge is the default)
+- Internet connection (tests run against the live Coursera site)
 
 ---
 
@@ -46,102 +52,118 @@ A beginner-friendly BDD automation project using Cucumber + Selenium + TestNG.
 
 ```
 CourseraAutomation/
-├── pom.xml                          ← Maven dependencies
-├── testng.xml                       ← TestNG suite (parallel config)
-├── allure.properties                ← Allure output path
+├── pom.xml                                ← Maven dependencies & plugins
+├── testng.xml                             ← TestNG suite (parallel="classes", thread-count=3)
+├── allure.properties                      ← Allure results directory
+├── README.md
 │
-├── src/
-│   ├── main/java/
-│   │   ├── base/
-│   │   │   └── BaseClass.java       ← ThreadLocal<WebDriver> — parallel-safe
-│   │   ├── pages/                   ← Page Object Model (POM)
-│   │   │   ├── HomePage.java
-│   │   │   ├── SearchResultsPage.java
-│   │   │   ├── LanguageCoursesPage.java
-│   │   │   └── CampusPage.java
-│   │   ├── hooks/
-│   │   │   └── CucumberHooks.java   ← @Before → launch, @After → quit + screenshot
-│   │   ├── listeners/
-│   │   │   └── CucumberListener.java ← ONE file, ConcurrentEventListener
-│   │   ├── utils/
-│   │   │   ├── ConfigReader.java    ← Reads config.properties
-│   │   │   ├── ExcelDataWriter.java ← Apache POI — writes course data to .xlsx
-│   │   │   ├── WaitUtil.java        ← Smart waits (explicit/implicit)
-│   │   │   ├── JavaScriptUtil.java  ← JS scrolling and clicking
-│   │   │   ├── ScreenshotUtil.java  ← Captures screenshots on failure
-│   │   │   └── ExtentReportManager.java ← Extent HTML report
-│   │   └── constants/
-│   │       └── FrameworkConstants.java ← URLs, paths, test data
-│   │
-│   └── main/resources/
-│       ├── config/config.properties ← browser, URL, timeouts
-│       └── log4j/log4j2.xml         ← Logging configuration
+├── src/main/java/com/hackathonProject/
+│   ├── base/
+│   │   └── BaseClass.java                 ← ThreadLocal<WebDriver>, Chrome/Edge/Firefox launch
+│   ├── constants/
+│   │   └── FrameworkConstants.java        ← BASE_URL, EXCEL_OUTPUT_PATH, paths
+│   ├── pages/                             ← Page Object Model
+│   │   ├── HomePage.java
+│   │   ├── SearchResultsPage.java         ← incl. CourseInfo inner class
+│   │   ├── LanguageCoursesPage.java
+│   │   └── CampusPage.java
+│   ├── hooks/
+│   │   └── CucumberHooks.java             ← @Before launches browser, @After screenshots + quit
+│   ├── listeners/
+│   │   └── CucumberListener.java          ← ConcurrentEventListener, archives reports
+│   └── utils/
+│       ├── ConfigReader.java              ← Loads config.properties on first access
+│       ├── ExcelDataWriter.java           ← writeCourseData + readTestData
+│       ├── WaitUtil.java                  ← explicit & fluent waits (no Thread.sleep)
+│       ├── JavaScriptUtil.java            ← JS scroll, JS click, highlight, getText
+│       ├── ScreenshotUtil.java            ← File + byte[] capture
+│       └── ExtentReportManager.java       ← ThreadLocal<ExtentTest>, timestamped HTML
 │
-├── src/test/
-│   ├── java/
-│   │   ├── stepdefinitions/
-│   │   │   ├── CourseSearchSteps.java
-│   │   │   ├── LanguageLearningSteps.java
-│   │   │   └── EnterpriseFormSteps.java
-│   │   └── runners/
-│   │       └── TestRunner.java      ← @CucumberOptions + parallel=true
-│   │
-│   └── resources/
-│       ├── features/
-│       │   ├── CourseSearch.feature
-│       │   ├── LanguageLearning.feature
-│       │   └── EnterpriseForm.feature
-│       ├── testdata/                ← Excel output saved here
-│       └── extent.properties        ← Extent adapter config
+├── src/main/resources/
+│   ├── config/config.properties           ← browser, baseUrl, waits, output paths
+│   └── log4j2.xml                         ← Console + RollingFile (logs/automation.log)
 │
-├── screenshots/                     ← Auto-saved on failure
+├── src/test/java/com/hackathonProject/
+│   ├── runners/
+│   │   └── TestRunner.java                ← @CucumberOptions, @DataProvider(parallel=true), tags="@Smoke"
+│   └── stepdefinitions/
+│       ├── CourseSearchSteps.java
+│       ├── LanguageLearningSteps.java
+│       └── EnterpriseFormSteps.java
+│
+├── src/test/resources/
+│   ├── features/
+│   │   ├── CourseSearch.feature
+│   │   ├── LanguageLearning.feature
+│   │   └── EnterpriseForm.feature
+│   ├── testdata/                          ← Excel output saved here
+│   └── extent.properties                  ← Extent Cucumber adapter config
+│
+├── screenshots/                           ← Captured on failure (and at key form steps)
 ├── reports/
-│   ├── extent/ExtentReport.html     ← Extent HTML report
-│   └── cucumber/                    ← Cucumber HTML + JSON
-└── logs/automation.log              ← Log4j2 log file
+│   ├── extent/
+│   │   ├── ExtentReport.html              ← from the Cucumber-Extent adapter
+│   │   └── ExtentReport_<timestamp>.html  ← from ExtentReportManager
+│   ├── cucumber/
+│   │   ├── cucumber-report.html           ← latest
+│   │   ├── cucumber-report_<timestamp>.html  ← archived per run
+│   │   ├── cucumber-report.json
+│   │   └── cucumber-report_<timestamp>.json
+│   └── allure-report/index.html           ← auto-generated by allure-maven
+└── logs/
+    └── automation.log                     ← rolling daily / 10MB
 ```
 
 ---
 
 ## How to Run
 
-### Run all tests (parallel, 3 threads)
+### Run the full suite (parallel, 3 threads)
 ```bash
 cd CourseraAutomation
 mvn clean test
 ```
+This reads `testng.xml` (via Surefire), which launches `TestRunner` with `parallel="classes"` and `thread-count="3"`. Each Cucumber scenario runs on its own thread because the runner exposes `@DataProvider(parallel = true)`.
+
+Alternatively, from Eclipse: right-click `testng.xml` → **Run As → TestNG Suite**.
 
 ### Run only one flow by tag
+The runner has `tags="@Smoke"` hard-coded. To restrict further at the CLI:
 ```bash
 mvn test -Dcucumber.filter.tags="@CourseSearch"
 mvn test -Dcucumber.filter.tags="@LanguageLearning"
 mvn test -Dcucumber.filter.tags="@EnterpriseForm"
 ```
 
-### Run in a different browser
-```bash
-mvn test -Dbrowser=firefox
-mvn test -Dbrowser=edge
-```
+### Switch browsers
+The browser comes from `src/main/resources/config/config.properties` (currently `browser=edge`). To change it:
 
-### Generate Allure report (after test run)
+- **Permanent:** edit `config.properties` → `browser=chrome` (or `firefox`).
+- **Per-thread (cross-browser run):** uncomment the `@BeforeClass` block in `TestRunner.java`, define `<parameter name="browser" .../>` blocks in `testng.xml`, and the runner will call `BaseClass.setBrowserOverride(browser)` on each thread.
+
+### Allure report
+The `allure-maven` plugin is bound to the `test` phase and auto-generates the report into `reports/allure-report/` after every `mvn test`. To regenerate manually:
 ```bash
 mvn allure:report
-# Then open: target/site/allure-maven-plugin/index.html
+# Opens via a static server:
+mvn allure:serve
 ```
+Allure HTML can't be opened by double-clicking the file because it loads JSON via AJAX — use the bundled CLI (`.allure/allure-2.27.0/bin/allure serve target/allure-results`) or `mvn allure:serve`.
 
 ---
 
-## Reports
+## Reports & Artifacts
 
-| Report | Location |
-|--------|----------|
-| Extent HTML | `reports/extent/ExtentReport.html` |
-| Cucumber HTML | `reports/cucumber/cucumber-report.html` |
-| Allure HTML | `target/site/allure-maven-plugin/index.html` |
+| Output | Path |
+|--------|------|
+| Cucumber HTML | `reports/cucumber/cucumber-report.html` (+ timestamped copy) |
+| Cucumber JSON | `reports/cucumber/cucumber-report.json` (+ timestamped copy) |
+| Extent HTML (adapter) | `reports/extent/ExtentReport.html` |
+| Extent HTML (manager) | `reports/extent/ExtentReport_<timestamp>.html` |
+| Allure HTML | `reports/allure-report/index.html` |
 | Log file | `logs/automation.log` |
 | Excel output | `src/test/resources/testdata/CourseData.xlsx` |
-| Screenshots | `screenshots/` (on failure) |
+| Screenshots | `screenshots/<scenario>_<timestamp>.png` |
 
 ---
 
@@ -150,28 +172,32 @@ mvn allure:report
 | Concept | Where |
 |---------|-------|
 | BDD (Given/When/Then) | All `.feature` files |
-| POM Design Pattern | `pages/` package |
+| Page Object Model | `pages/` |
 | ThreadLocal WebDriver | `BaseClass.java` |
-| Parallel Execution | `testng.xml` + `@DataProvider(parallel=true)` |
-| Apache POI (Excel) | `ExcelDataWriter.java` |
-| Cucumber Listener | `CucumberListener.java` (ConcurrentEventListener) |
-| Log4j2 Logging | All classes + `log4j2.xml` |
-| Screenshot on Failure | `CucumberHooks.java` + `ScreenshotUtil.java` |
-| Extent Reports | `ExtentReportManager.java` |
-| Allure Reports | `allure-cucumber7-jvm` plugin in pom.xml |
-| Multiple Locators | XPath, CSS, Name, ID, LinkText, PartialLinkText |
-| Exception Handling | Try-catch in all page methods |
-| Assertions | TestNG Assert in step definitions |
-| DataTable (Cucumber) | `EnterpriseFormSteps.java` — form data |
-| Config-Driven | `config.properties` + `ConfigReader.java` |
-| Data-Driven (Excel) | `ExcelDataWriter.readTestData()` |
+| Parallel Execution | `testng.xml` + `@DataProvider(parallel = true)` |
+| Cross-Browser (Chrome, Edge, Firefox) | `BaseClass.createDriver()` + `browserOverride` ThreadLocal |
+| Edge per-thread profile | Unique `--user-data-dir` per thread to avoid session collisions |
+| Apache POI (Excel) | `ExcelDataWriter.writeCourseData / readTestData` |
+| Custom Cucumber Listener | `CucumberListener` (`ConcurrentEventListener`) — logs steps + archives reports |
+| Log4j2 Logging | All classes + `log4j2.xml` (console + RollingFile) |
+| Screenshot on Failure | `CucumberHooks.@After` + `ScreenshotUtil` (file + byte[]) |
+| Extent Reports | `ExtentReportManager` + `extentreports-cucumber7-adapter` |
+| Allure Reports | `allure-cucumber7-jvm` plugin + `allure-maven` |
+| Locators | `@FindBy` (id, name, css, xpath) and `By` constants for dynamic content |
+| Exception Handling | Try-catch in page methods and waits |
+| Soft Assertions | TestNG `SoftAssert` in every step definition |
+| DataTable | `EnterpriseFormSteps` form data |
+| Config-Driven | `config.properties` + `ConfigReader` |
 
 ---
 
-## Notes for Beginners
+## Notes
 
-- **Never modify page elements in step definitions** — always go through Page Objects.
-- **ThreadLocal is crucial for parallel runs** — without it, threads share one browser and crash.
-- **`@Before` and `@After` hooks** are in `CucumberHooks`, not in TestRunner.
-- **Extent Reports must be flushed** — this happens in `CucumberListener.onRunFinished()`.
-- **Log4j config** (`log4j2.xml`) must be on the classpath — it's in `src/main/resources/log4j/`.
+- **Never touch `WebDriver` from step definitions** — always go through a Page Object.
+- **ThreadLocal is crucial for parallel runs** — without it, threads share a driver and crash.
+- **Cucumber hooks live in `CucumberHooks`**, not in the runner.
+- **Extent must be flushed once** — `CucumberListener.onRunFinished()` handles it.
+- **`log4j2.xml` is at the root of `src/main/resources/`** so Log4j picks it up from the classpath without extra config.
+- **Edge needs a unique profile per thread** — set automatically in `BaseClass` using `java.io.tmpdir` + thread id + timestamp. Without this, parallel Edge sessions share user data and intermittently fail.
+- **Wait strategy:** zero `Thread.sleep` anywhere; only `WebDriverWait` and `FluentWait` (see `WaitUtil`).
+- **Reports are timestamped** so reruns don't overwrite history.
