@@ -14,20 +14,6 @@ import com.hackathonProject.utils.ConfigReader;
 
 import java.time.Duration;
 
-/**
- * BaseClass - Foundation of the entire framework.
- *
- * DRIVER MANAGEMENT:
- * - Chrome: uses WebDriverManager (already cached, works fine)
- * - Edge: uses Selenium's built-in Selenium Manager (no external download needed)
- *   Selenium 4.6+ includes Selenium Manager which auto-detects the browser
- *   and downloads the matching driver. No WebDriverManager.edgedriver().setup() needed.
- * - Firefox: uses WebDriverManager
- *
- * CROSS-BROWSER SUPPORT:
- * - browserOverride (ThreadLocal) lets each thread specify its own browser
- * - If set, it overrides config.properties "browser" value
- */
 public class BaseClass {
 
     private static final Logger logger = LogManager.getLogger(BaseClass.class);
@@ -48,46 +34,52 @@ public class BaseClass {
 
     public static void createDriver() {
         String browser = getCurrentBrowser();
-        logger.info("Launching browser: " + browser);
+        logger.info("Launching browser: " + browser + " on thread: " + Thread.currentThread().getName());
 
         WebDriver webDriver;
 
-        switch (browser.toLowerCase()) {
+        if (browser.equalsIgnoreCase("chrome")) {
+            ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.addArguments("--start-maximized");
+            chromeOptions.addArguments("--disable-notifications");
+            chromeOptions.addArguments("--no-sandbox");
+            chromeOptions.addArguments("--disable-dev-shm-usage");
+            WebDriverManager.chromedriver().setup();
+            webDriver = new ChromeDriver(chromeOptions);
+            logger.info("Chrome browser launched");
 
-            case "firefox":
-                WebDriverManager.firefoxdriver().setup();
-                webDriver = new FirefoxDriver();
-                logger.info("Firefox browser launched");
-                break;
+        } else if (browser.equalsIgnoreCase("edge")) {
+            EdgeOptions edgeOptions = new EdgeOptions();
+            edgeOptions.addArguments("--start-maximized");
+            edgeOptions.addArguments("--disable-notifications");
+            edgeOptions.addArguments("--no-sandbox");
+            edgeOptions.addArguments("--disable-dev-shm-usage");
+            // Force unique user data dir per thread to prevent session sharing
+            String uniqueProfile = System.getProperty("java.io.tmpdir")
+                + "edge_profile_" + Thread.currentThread().threadId() + "_" + System.currentTimeMillis();
+            edgeOptions.addArguments("--user-data-dir=" + uniqueProfile);
+            webDriver = new EdgeDriver(edgeOptions);
+            logger.info("Edge browser launched (via Selenium Manager) with unique profile");
 
-            case "edge":
-                // Use Selenium's built-in driver management (Selenium Manager)
-                // No WebDriverManager.edgedriver().setup() needed — Selenium 4.6+
-                // auto-detects Edge and downloads msedgedriver automatically
-                EdgeOptions edgeOptions = new EdgeOptions();
-                edgeOptions.addArguments("--start-maximized");
-                edgeOptions.addArguments("--disable-notifications");
-                webDriver = new EdgeDriver(edgeOptions);
-                logger.info("Edge browser launched (via Selenium Manager)");
-                break;
+        } else if (browser.equalsIgnoreCase("firefox")) {
+            WebDriverManager.firefoxdriver().setup();
+            webDriver = new FirefoxDriver();
+            logger.info("Firefox browser launched");
 
-            case "chrome":
-            default:
-                ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--start-maximized");
-                chromeOptions.addArguments("--disable-notifications");
-                WebDriverManager.chromedriver().setup();
-                webDriver = new ChromeDriver(chromeOptions);
-                logger.info("Chrome browser launched");
-                break;
+        } else {
+            throw new IllegalArgumentException("Unsupported browser: " + browser);
         }
 
         webDriver.manage().timeouts().implicitlyWait(
             Duration.ofSeconds(Integer.parseInt(ConfigReader.getProperty("implicitWait")))
         );
+        webDriver.manage().timeouts().pageLoadTimeout(
+            Duration.ofSeconds(Integer.parseInt(ConfigReader.getProperty("maxWaitTime")))
+        );
 
         driver.set(webDriver);
-        logger.info("WebDriver [" + browser + "] created and stored in ThreadLocal");
+        logger.info("WebDriver [" + browser + "] created and stored in ThreadLocal. Session: "
+            + ((org.openqa.selenium.remote.RemoteWebDriver) webDriver).getSessionId());
     }
 
     public static WebDriver getDriver() {
@@ -97,7 +89,7 @@ public class BaseClass {
     public static void removeDriver() {
         if (driver.get() != null) {
             String browser = getCurrentBrowser();
-            logger.info("Quitting " + browser + " browser and removing from ThreadLocal");
+            logger.info("Quitting " + browser + " browser on thread: " + Thread.currentThread().getName());
             try {
                 driver.get().quit();
             } catch (Exception e) {

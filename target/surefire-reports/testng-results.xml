@@ -2,15 +2,15 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-19T13:39:31 IST" name="CourseraAutomationSuite" finished-at="2026-05-19T13:41:06 IST" duration-ms="94477">
+  <suite started-at="2026-05-22T17:38:55 IST" name="CourseraAutomationSuite" finished-at="2026-05-22T17:40:34 IST" duration-ms="98826">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.hackathonProject.runners.TestRunner@f0c8a99]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-05-19T13:39:31 IST" name="CourseraTests" finished-at="2026-05-19T13:41:06 IST" duration-ms="94477">
+    <test started-at="2026-05-22T17:38:55 IST" name="CourseraTests" finished-at="2026-05-22T17:40:34 IST" duration-ms="98826">
       <class name="com.hackathonProject.runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.hackathonProject.runners.TestRunner@f0c8a99]" started-at="2026-05-19T13:39:31 IST" name="setUpClass" finished-at="2026-05-19T13:39:33 IST" duration-ms="1250" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.hackathonProject.runners.TestRunner@f0c8a99]" started-at="2026-05-22T17:38:55 IST" name="setUpClass" finished-at="2026-05-22T17:38:56 IST" duration-ms="1169" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,39 +21,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.hackathonProject.runners.TestRunner@f0c8a99]" started-at="2026-05-19T13:39:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T13:40:18 IST" duration-ms="45018" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify email validation error on business contact form"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Business Contact Form - Invalid Email Validation"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.hackathonProject.runners.TestRunner@f0c8a99]" started-at="2026-05-19T13:39:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T13:40:44 IST" duration-ms="70800" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Extract all languages and levels from Language Learning category"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Language Learning - Extract Languages and Levels"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.hackathonProject.runners.TestRunner@f0c8a99]" started-at="2026-05-19T13:39:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T13:41:06 IST" duration-ms="92798" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.hackathonProject.runners.TestRunner@f0c8a99]" started-at="2026-05-22T17:38:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-22T17:40:33 IST" duration-ms="96882" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,7 +37,39 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.hackathonProject.runners.TestRunner@f0c8a99]" started-at="2026-05-19T13:41:06 IST" name="tearDownClass" finished-at="2026-05-19T13:41:06 IST" duration-ms="383" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.hackathonProject.runners.TestRunner@f0c8a99]" started-at="2026-05-22T17:38:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-22T17:39:43 IST" duration-ms="46962" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify email validation error on business contact form"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Business Contact Form - Invalid Email Validation"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.hackathonProject.runners.TestRunner@f0c8a99]" started-at="2026-05-22T17:38:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-22T17:40:19 IST" duration-ms="83011" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Extract all languages and levels from Language Learning category"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Language Learning - Extract Languages and Levels"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.hackathonProject.runners.TestRunner@f0c8a99]" started-at="2026-05-22T17:40:33 IST" name="tearDownClass" finished-at="2026-05-22T17:40:34 IST" duration-ms="731" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

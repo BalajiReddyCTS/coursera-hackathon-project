@@ -37,6 +37,8 @@ import org.testng.annotations.DataProvider;
         "com.hackathonProject.listeners.CucumberListener"
     },
 
+    tags="@Smoke",
+    
     monochrome = true,
 
     publish = false

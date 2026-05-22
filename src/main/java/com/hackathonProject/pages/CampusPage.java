@@ -26,9 +26,6 @@ public class CampusPage {
     @FindBy(id = "Email")
     private WebElement emailField;
 
-    @FindBy(id = "Phone")
-    private WebElement phoneField;
-
     @FindBy(id = "ValidMsgEmail")
     private WebElement emailErrorMsg;
 
@@ -57,7 +54,7 @@ public class CampusPage {
     }
 
     public void fillFormWithInvalidEmail(String firstName, String lastName,
-                                          String invalidEmail, String phone) {
+                                          String invalidEmail) {
         logger.info("Filling form with invalid email: " + invalidEmail);
 
         clearAndType(firstNameField, firstName);
@@ -66,10 +63,6 @@ public class CampusPage {
         clearAndType(lastNameField, lastName);
         logger.info("Entered Last Name: " + lastName);
 
-        jsClick(phoneField);
-        phoneField.clear();
-        phoneField.sendKeys(phone);
-        logger.info("Entered Phone: " + phone);
 
         // Email LAST — triggers Marketo error tooltip on tab-out
         jsClick(emailField);

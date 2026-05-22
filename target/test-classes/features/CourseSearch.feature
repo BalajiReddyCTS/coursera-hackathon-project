@@ -15,9 +15,9 @@ Feature: Course Search - Web Development Courses
   @Smoke @CourseSearch
   Scenario: Search web development courses for beginners in English and save to Excel
     When the user searches for "web development courses for beginners"
-    Then the search results page should be displayed
-    When the user applies the language filter "English"
+    And the user applies the language filter "English"
     And the user applies the level filter "Beginner"
-    Then the user extracts the first 5 courses with name, hours and rating
+    And the user extracts the first 5 courses with name, hours and rating
     And the course data is saved to an Excel file
+    Then the search results page should be displayed
     And the first course name should not be empty

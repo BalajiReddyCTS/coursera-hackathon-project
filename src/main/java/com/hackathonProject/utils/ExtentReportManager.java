@@ -7,33 +7,37 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class ExtentReportManager {
 
     private static final Logger logger = LogManager.getLogger(ExtentReportManager.class);
+    private static final String TIMESTAMP = LocalDateTime.now()
+        .format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss"));
 
     private static ExtentReports extentReports;
-
     private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
+
+    // Exposed so CucumberListener can archive cucumber reports to the same folder
+    public static String getTimestamp() {
+        return TIMESTAMP;
+    }
 
     private static synchronized ExtentReports getExtentReports() {
         if (extentReports == null) {
-            // Report output path
-            String reportPath = "reports/extent/ExtentReport.html";
+            String reportPath = "reports/extent/ExtentReport_" + TIMESTAMP + ".html";
 
-            // Configure the HTML renderer
             ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
             sparkReporter.config().setDocumentTitle("Coursera Automation Report");
             sparkReporter.config().setReportName("BDD Test Execution Report");
-            sparkReporter.config().setTheme(Theme.DARK); 
+            sparkReporter.config().setTheme(Theme.DARK);
             sparkReporter.config().setEncoding("UTF-8");
 
-            // Attach renderer to the report
             extentReports = new ExtentReports();
             extentReports.attachReporter(sparkReporter);
 
-            // System info shown in the report header
             extentReports.setSystemInfo("Framework", "Cucumber BDD + Selenium");
-            extentReports.setSystemInfo("Language", "Java 11");
             extentReports.setSystemInfo("Browser", ConfigReader.getPropertyOrDefault("browser", "chrome"));
             extentReports.setSystemInfo("OS", System.getProperty("os.name"));
             extentReports.setSystemInfo("Java Version", System.getProperty("java.version"));
@@ -45,43 +49,31 @@ public class ExtentReportManager {
 
     public static void createTest(String testName) {
         ExtentTest test = getExtentReports().createTest(testName);
-        extentTest.set(test); // Store in this thread's slot
+        extentTest.set(test);
     }
 
-    //Logs a PASS result
     public static void logPass(String message) {
-        if (extentTest.get() != null) {
-            extentTest.get().pass(message);
-        }
+        if (extentTest.get() != null) extentTest.get().pass(message);
     }
 
-    //Logs a FAIL result
     public static void logFail(String message) {
-        if (extentTest.get() != null) {
-            extentTest.get().fail(message);
-        }
+        if (extentTest.get() != null) extentTest.get().fail(message);
     }
 
-    //Logs an INFO message 
     public static void logInfo(String message) {
-        if (extentTest.get() != null) {
-            extentTest.get().info(message);
-        }
+        if (extentTest.get() != null) extentTest.get().info(message);
     }
 
-    //Logs a WARNING 
     public static void logWarning(String message) {
-        if (extentTest.get() != null) {
-            extentTest.get().warning(message);
-        }
+        if (extentTest.get() != null) extentTest.get().warning(message);
     }
 
     public static void attachScreenshot(String screenshotPath) {
         if (extentTest.get() != null && screenshotPath != null && !screenshotPath.isEmpty()) {
             try {
-                extentTest.get().addScreenCaptureFromPath(screenshotPath, "Failure Screenshot");
+                extentTest.get().addScreenCaptureFromPath(screenshotPath, "Screenshot");
             } catch (Exception e) {
-                logger.warn("Could not attach screenshot to Extent Report: " + e.getMessage());
+                logger.warn("Could not attach screenshot: " + e.getMessage());
             }
         }
     }

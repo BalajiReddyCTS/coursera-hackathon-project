@@ -5,13 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Coursera Automation Report</title>
+<title></title>
 <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
-<style type="text/css"></style></head><body class="spa -report dark">
+<style type="text/css"></style></head><body class="spa bdd-report standard">
   <div class="app">
     <div class="layout">
 <div class="header navbar">
@@ -32,10 +32,10 @@
 </ul>
 <ul class="nav-right">
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">BDD Test Execution Report</span></a>
+<a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">May 19, 2026 01:39:38 pm</span></a>
+<a href="#"><span class="badge badge-primary">May 22, 2026 05:38:55 pm</span></a>
 </li>
 </ul>
 </div>
@@ -45,6 +45,11 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -71,17 +76,23 @@
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
 </li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@LanguageLearning</a><a class="dropdown-item" href="#">@Smoke</a><a class="dropdown-item" href="#">@EnterpriseForm</a><a class="dropdown-item" href="#">@CourseSearch</a>
+</ul>
+</li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="10"
+        <li class="test-item"  status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Verify email validation error on business contact form</p>
+            <p class="name">Language Learning - Extract Languages and Levels</p>
             <p class="text-sm">
-              <span>1:39:38 pm</span> / <span>00:00:35:263</span>
+              <span>5:38:57 pm</span> / <span>00:01:22:787</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,92 +100,76 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Verify email validation error on business contact form</h5>
-<span class='badge badge-success'>05.19.2026 1:39:38 pm</span>
-<span class='badge badge-danger'>05.19.2026 1:40:13 pm</span>
-<span class='badge badge-default'>00:00:35:263</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<h5 class="test-status text-pass">Language Learning - Extract Languages and Levels</h5>
+<span class='badge badge-success'>05.22.2026 5:38:57 pm</span>
+<span class='badge badge-danger'>05.22.2026 5:40:19 pm</span>
+<span class='badge badge-default'>00:01:22:787</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
+<div class="m-t-10 m-l-5"></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2485865\Downloads\CourseraAutomation_draft\CourseraAutomation\screenshots\FormFilledWithInvalidEmail_2026-05-19_13-40-13.png' src="C:\Users\2485865\Downloads\CourseraAutomation_draft\CourseraAutomation\screenshots\FormFilledWithInvalidEmail_2026-05-19_13-40-13.png">
-    <div class="title">Failure Screenshot</div>
-    </div></div>
-    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2485865\Downloads\CourseraAutomation_draft\CourseraAutomation\screenshots\EmailValidationError_2026-05-19_13-40-13.png' src="C:\Users\2485865\Downloads\CourseraAutomation_draft\CourseraAutomation\screenshots\EmailValidationError_2026-05-19_13-40-13.png">
-    <div class="title">Failure Screenshot</div>
-    </div></div>
-<div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:39:38 pm</td>
-        <td>
-          Browser launched for scenario: Verify email validation error on business contact form
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:39:38 pm</td>
-        <td>
-          Opening Coursera For Business page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:39:50 pm</td>
-        <td>
-          Clicking Contact Sales button
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:39:50 pm</td>
-        <td>
-          Filling form: {firstName=Srijita, lastName=Baksi, email=srijitacogniznat.com, phone=9775985472}
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:40:13 pm</td>
-        <td>
-          Error message captured: Must be valid email.
-example@yourdomain.com
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:40:13 pm</td>
-        <td>
-          Error contains 'valid email': Must be valid email.
-example@yourdomain.com
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:40:13 pm</td>
-        <td>
-          Scenario PASSED: Verify email validation error on business contact form
-        </td>
-      </tr>
-  </tbody>
-</table>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Extract all languages and levels from Language Learning category</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.LanguageLearningSteps.theUserNavigatesToLanguageLearning()">
+                <span>Given the user navigates to the Language Learning category</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.LanguageLearningSteps.theUserOpensLanguageFilterDropdown()">
+                <span>When the user opens the language filter dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.LanguageLearningSteps.theUserOpensLevelFilterDropdown()">
+                <span>And the user opens the level filter dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.LanguageLearningSteps.allLanguagesShouldBeCaptured()">
+                <span>Then all available languages with their counts should be captured and displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.LanguageLearningSteps.allLevelsShouldBeCaptured()">
+                <span>And all available levels with their counts should be captured and displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.LanguageLearningSteps.languageListShouldHaveAtLeast(int)">
+                <span>And the language list should contain at least 5 languages</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.LanguageLearningSteps.levelListShouldHaveAtLeast(int)">
+                <span>And the level list should contain at least 2 levels</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="11"
+        <li class="test-item"  status="pass" test-id="3"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Extract all languages and levels from Language Learning category</p>
+            <p class="name">Business Contact Form - Invalid Email Validation</p>
             <p class="text-sm">
-              <span>1:39:38 pm</span> / <span>00:01:02:379</span>
+              <span>5:38:57 pm</span> / <span>00:00:46:642</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -182,166 +177,68 @@ example@yourdomain.com
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Extract all languages and levels from Language Learning category</h5>
-<span class='badge badge-success'>05.19.2026 1:39:38 pm</span>
-<span class='badge badge-danger'>05.19.2026 1:40:40 pm</span>
-<span class='badge badge-default'>00:01:02:379</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<h5 class="test-status text-pass">Business Contact Form - Invalid Email Validation</h5>
+<span class='badge badge-success'>05.22.2026 5:38:57 pm</span>
+<span class='badge badge-danger'>05.22.2026 5:39:43 pm</span>
+<span class='badge badge-default'>00:00:46:642</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
+<div class="m-t-10 m-l-5"></div>
 </div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:39:38 pm</td>
-        <td>
-          Browser launched for scenario: Extract all languages and levels from Language Learning category
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:39:38 pm</td>
-        <td>
-          Navigating to Language Learning
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:39:53 pm</td>
-        <td>
-          Extracting language filter options
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:40:16 pm</td>
-        <td>
-          
-===== LANGUAGES EXTRACTED =====
-  English                   → 9692 courses
-  Spanish                   → 4333 courses
-  Kazakh                    → 4295 courses
-  French                    → 4229 courses
-  Arabic                    → 4134 courses
-  German                    → 4116 courses
-  Portuguese                → 3009 courses
-  Indonesian                → 2960 courses
-  Chinese                   → 2798 courses
-  Hungarian                 → 2685 courses
-  Russian                   → 2661 courses
-  Japanese                  → 2656 courses
-  Korean                    → 2639 courses
-  Hindi                     → 2563 courses
-  Italian                   → 2553 courses
-  Turkish                   → 2509 courses
-  Thai                      → 2474 courses
-  Ukrainian                 → 2454 courses
-  Dutch                     → 2443 courses
-  Greek                     → 2441 courses
-  Polish                    → 2440 courses
-  Swedish                   → 2422 courses
-  Uzbek                     → 1926 courses
-  Vietnamese                → 1807 courses
-  Pushto                    → 1806 courses
-  Azerbaijani               → 1593 courses
-  Urdu                      → 1351 courses
-  Bengali                   → 1343 courses
-  Oriya                     → 233 courses
-  Malay                     → 189 courses
-  Haitian (Haitian Creole)  → 90 courses
-  Persian                   → 62 courses
-  Khmer                     → 37 courses
-  Romanian                  → 30 courses
-  Hebrew                    → 29 courses
-  Serbian                   → 23 courses
-  Afrikaans                 → 19 courses
-  Javanese                  → 17 courses
-  Finnish                   → 16 courses
-  Tamil                     → 15 courses
-  Catalan                   → 13 courses
-  Slovak                    → 10 courses
-  Czech                     → 9 courses
-  Estonian                  → 9 courses
-  Mongolian                 → 8 courses
-  Albanian                  → 5 courses
-  Georgian                  → 5 courses
-  Telugu                    → 5 courses
-  Croatian                  → 4 courses
-  Bulgarian                 → 3 courses
-  Lithuanian                → 3 courses
-  Burmese                   → 2 courses
-  Latvian                   → 2 courses
-  Marathi                   → 2 courses
-  Nepali                    → 2 courses
-  Danish                    → 1 courses
-  Kinyarwanda               → 1 courses
-  Macedonian                → 1 courses
-  Malayalam                 → 1 courses
-  Slovenian                 → 1 courses
-  Swahili                   → 1 courses
-  Tagalog                   → 1 courses
-================================
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:40:16 pm</td>
-        <td>
-          Extracting level filter options
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:40:40 pm</td>
-        <td>
-          
-===== LEVELS EXTRACTED =====
-  Beginner                  → 4705 courses
-  Intermediate              → 4250 courses
-  Advanced                  → 449 courses
-  Mixed                     → 938 courses
-============================
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:40:40 pm</td>
-        <td>
-          Language count: 62 (minimum: 5)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:40:40 pm</td>
-        <td>
-          Level count: 4 (minimum: 2)
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:40:40 pm</td>
-        <td>
-          Scenario PASSED: Extract all languages and levels from Language Learning category
-        </td>
-      </tr>
-  </tbody>
-</table>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="4"><span class="badge log pass-bg mr-2">Pass</span>Verify email validation error on business contact form</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.EnterpriseFormSteps.theUserNavigatesToForBusiness()">
+                <span>Given the user navigates to the Coursera For Business page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.EnterpriseFormSteps.theUserClicksContactSales()">
+                <span>When the user clicks on Contact Sales</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.EnterpriseFormSteps.theUserFillsContactForm(io.cucumber.datatable.DataTable)">
+                <span>And the user fills the contact form with the following details:</span>
+      <div><table class='markup-table table '><tr><td>firstName</td><td>lastName</td><td>email</td></tr><tr><td>Srijita</td><td>Baksi</td><td>srijitacogniznat.com</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.EnterpriseFormSteps.anEmailValidationErrorShouldBeDisplayed()">
+                <span>Then an email validation error message should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.EnterpriseFormSteps.theErrorMessageShouldContain(java.lang.String)">
+                <span>And the error message should contain "valid email"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="14"
+        <li class="test-item"  status="pass" test-id="5"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Search web development courses for beginners in English and save to Excel</p>
+            <p class="name">Course Search - Web Development Courses</p>
             <p class="text-sm">
-              <span>1:39:38 pm</span> / <span>00:01:23:642</span>
+              <span>5:38:57 pm</span> / <span>00:01:36:636</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -349,113 +246,70 @@ example@yourdomain.com
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Search web development courses for beginners in English and save to Excel</h5>
-<span class='badge badge-success'>05.19.2026 1:39:38 pm</span>
-<span class='badge badge-danger'>05.19.2026 1:41:02 pm</span>
-<span class='badge badge-default'>00:01:23:642</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<h5 class="test-status text-pass">Course Search - Web Development Courses</h5>
+<span class='badge badge-success'>05.22.2026 5:38:57 pm</span>
+<span class='badge badge-danger'>05.22.2026 5:40:33 pm</span>
+<span class='badge badge-default'>00:01:36:636</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
+<div class="m-t-10 m-l-5"></div>
 </div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:39:38 pm</td>
-        <td>
-          Browser launched for scenario: Search web development courses for beginners in English and save to Excel
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:39:38 pm</td>
-        <td>
-          Opening Coursera home page
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:39:55 pm</td>
-        <td>
-          Searching for: web development courses for beginners
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:40:23 pm</td>
-        <td>
-          Search results page displayed. URL: https://www.coursera.org/search?query=web%20development%20courses%20for%20beginners
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:40:23 pm</td>
-        <td>
-          Applying language filter: English
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:40:37 pm</td>
-        <td>
-          Applying level filter: Beginner
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:40:50 pm</td>
-        <td>
-          Extracting 5 courses
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:41:01 pm</td>
-        <td>
-            1. Status: Free Trial | Rating: 4.7 | Hours: 3 - 6 Months
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:41:01 pm</td>
-        <td>
-            2. Status: Preview | Rating: 4.6 | Hours: 1 - 3 Months
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>1:41:01 pm</td>
-        <td>
-            3. Status: New | Rating: N/A | Hours: 3 - 6 Months
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:41:02 pm</td>
-        <td>
-          Excel file saved at: src/test/resources/testdata/CourseData.xlsx
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:41:02 pm</td>
-        <td>
-          First course: Status: Free Trial
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>1:41:02 pm</td>
-        <td>
-          Scenario PASSED: Search web development courses for beginners in English and save to Excel
-        </td>
-      </tr>
-  </tbody>
-</table>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="6"><span class="badge log pass-bg mr-2">Pass</span>Search web development courses for beginners in English and save to Excel</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.CourseSearchSteps.theUserIsOnCourseraHomePage()">
+                <span>Given the user is on the Coursera home page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.CourseSearchSteps.theUserSearchesFor(java.lang.String)">
+                <span>When the user searches for "web development courses for beginners"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.CourseSearchSteps.theUserAppliesLanguageFilter(java.lang.String)">
+                <span>And the user applies the language filter "English"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.CourseSearchSteps.theUserAppliesLevelFilter(java.lang.String)">
+                <span>And the user applies the level filter "Beginner"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.CourseSearchSteps.theUserExtractsFirstNCourses(int)">
+                <span>And the user extracts the first 5 courses with name, hours and rating</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.CourseSearchSteps.theCourseDataIsSavedToExcel()">
+                <span>And the course data is saved to an Excel file</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.CourseSearchSteps.theSearchResultsPageShouldBeDisplayed()">
+                <span>Then the search results page should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.hackathonProject.stepdefinitions.CourseSearchSteps.theFirstCourseNameShouldNotBeEmpty()">
+                <span>And the first course name should not be empty</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
 </div>
           </div>
         </li>
@@ -468,38 +322,218 @@ example@yourdomain.com
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="container-fluid p-4 view dashboard-view">
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">4</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@LanguageLearning</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@LanguageLearning</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Extract all languages and levels from Language Learning category</a>
+<div class="">
+<span class="badge badge-default">Language Learning - Extract Languages and Levels.Extract all languages and levels from Language Learning category</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+</span>
+<p class="name">@Smoke</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Smoke</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Extract all languages and levels from Language Learning category</a>
+<div class="">
+<span class="badge badge-default">Language Learning - Extract Languages and Levels.Extract all languages and levels from Language Learning category</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='4'>Verify email validation error on business contact form</a>
+<div class="">
+<span class="badge badge-default">Business Contact Form - Invalid Email Validation.Verify email validation error on business contact form</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='5' id='6'>Search web development courses for beginners in English and save to Excel</a>
+<div class="">
+<span class="badge badge-default">Course Search - Web Development Courses.Search web development courses for beginners in English and save to Excel</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@EnterpriseForm</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@EnterpriseForm</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='4'>Verify email validation error on business contact form</a>
+<div class="">
+<span class="badge badge-default">Business Contact Form - Invalid Email Validation.Verify email validation error on business contact form</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@CourseSearch</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@CourseSearch</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:38:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='5' id='6'>Search web development courses for beginners in English and save to Excel</a>
+<div class="">
+<span class="badge badge-default">Course Search - Web Development Courses.Search web development courses for beginners in English and save to Excel</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>May 19, 2026 01:39:38 pm</h3>
+<h3>May 22, 2026 05:38:55 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>May 19, 2026 01:41:06 pm</h3>
+<h3>May 22, 2026 05:40:33 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
-<p class="m-b-0 text-pass">Tests Passed</p>
+<p class="m-b-0 text-pass">Features Passed</p>
 <h3>3</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
-<p class="m-b-0 text-fail">Tests Failed</p>
+<p class="m-b-0 text-fail">Features Failed</p>
 <h3>0</h3>
 </div></div>
 </div>
 </div>
 <div class="row">
-<div class="col-md-6">
+<div class="col-md-4">
 <div class="card">
 <div class="card-header">
-<h6 class="card-title">Tests</h6>
+<h6 class="card-title">Features</h6>
 </div>
 <div class="card-body">
 <div class="">
@@ -508,32 +542,52 @@ example@yourdomain.com
 </div>
 <div class="card-footer">
 <div><small data-tooltip='100%'>
-<b>3</b> tests passed
+<b>3</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
+<small data-tooltip='0%'><b>0</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
 </div>
 </div>
 </div>
-<div class="col-md-6">
+<div class="col-md-4">
 <div class="card">
 <div class="card-header">
-<h6 class="card-title">Log events</h6>
+<h6 class="card-title">Scenarios</h6>
 </div>
 <div class="card-body">
 <div class="">
-<canvas id='events-analysis' width='115' height='90'></canvas>
+<canvas id='child-analysis' width='115' height='90'></canvas>
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='31%'><b>9</b> events passed</small></div>
+<div><small data-tooltip='100%'><b>3</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>20</b> others
+<small data-tooltip='0%'><b>0</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>20</b> steps passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -549,35 +603,46 @@ example@yourdomain.com
 </div></div>
 <script>
 var timeline = {
-"Verify email validation error on business contact form":35.263,"Extract all languages and levels from Language Learning category":62.379,"Search web development courses for beginners in English and save to Excel":83.642
+"Language Learning - Extract Languages and Levels":82.787,"Business Contact Form - Invalid Email Validation":46.642,"Course Search - Web Development Courses":96.636
 };
 </script>
 <div class="row">
-<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="col-lg-6 col-md-12 category-container">
 <div class="card">
-<div class="card-header"><p>System/Environment</p></div>
+<div class="card-header"><p>Tags</p></div>
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
-<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
-<tbody>
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>Framework</td>
-<td>Cucumber BDD + Selenium</td>
+<td>@LanguageLearning</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
 </tr>
 <tr>
-<td>Language</td>
-<td>Java 11</td>
+<td>@Smoke</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
 </tr>
 <tr>
-<td>Browser</td>
-<td>edge</td>
+<td>@EnterpriseForm</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
 </tr>
 <tr>
-<td>OS</td>
-<td>Windows 11</td>
-</tr>
-<tr>
-<td>Java Version</td>
-<td>25.0.1</td>
+<td>@CourseSearch</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
 </tr>
 </tbody>
 </table></div>
@@ -593,23 +658,18 @@ failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 0,
+passChild: 3,
 failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 0,
+passGrandChild: 20,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 9,
-failEvents: 0,
-warningEvents: 0,
-skipEvents: 0,
-infoEvents: 20
 };
 </script>        </div>
       </div>

@@ -5,27 +5,23 @@ import io.cucumber.plugin.event.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
+
 public class CucumberListener implements ConcurrentEventListener {
 
     private static final Logger logger = LogManager.getLogger(CucumberListener.class);
 
     @Override
     public void setEventPublisher(EventPublisher publisher) {
-
-        // ---- Scenario Started ----
         publisher.registerHandlerFor(TestCaseStarted.class, this::onScenarioStart);
-
-        // ---- Step Finished (each Given/When/Then) ----
         publisher.registerHandlerFor(TestStepFinished.class, this::onStepFinished);
-
-        // ---- Scenario Finished ----
         publisher.registerHandlerFor(TestCaseFinished.class, this::onScenarioFinished);
-
-        // ---- Entire Run Finished ----
         publisher.registerHandlerFor(TestRunFinished.class, this::onRunFinished);
     }
 
-    // ===== Event Handlers =====
     private void onScenarioStart(TestCaseStarted event) {
         String scenarioName = event.getTestCase().getName();
         String uri = event.getTestCase().getUri().toString();
@@ -63,8 +59,7 @@ public class CucumberListener implements ConcurrentEventListener {
     private void onScenarioFinished(TestCaseFinished event) {
         String scenarioName = event.getTestCase().getName();
         Status status = event.getResult().getStatus();
-        long durationNanos = event.getResult().getDuration().toNanos();
-        double durationSeconds = durationNanos / 1_000_000_000.0;
+        double durationSeconds = event.getResult().getDuration().toNanos() / 1_000_000_000.0;
 
         if (status == Status.PASSED) {
             logger.info(String.format("■ SCENARIO PASSED: [%s] in %.2fs", scenarioName, durationSeconds));
@@ -79,12 +74,37 @@ public class CucumberListener implements ConcurrentEventListener {
         logger.info("  CUCUMBER TEST RUN FINISHED");
         logger.info("========================================");
 
-        // Flush Extent Reports when run ends
+        // Flush Extent Reports
         try {
             com.hackathonProject.utils.ExtentReportManager.flushReports();
             logger.info("Extent Reports flushed successfully");
         } catch (Exception e) {
             logger.error("Could not flush Extent Reports: " + e.getMessage());
+        }
+
+        // Archive Cucumber reports with timestamp
+        archiveCucumberReports();
+    }
+
+    private void archiveCucumberReports() {
+        String timestamp = com.hackathonProject.utils.ExtentReportManager.getTimestamp();
+
+        copyFile("reports/cucumber/cucumber-report.html",
+                 "reports/cucumber/cucumber-report_" + timestamp + ".html");
+
+        copyFile("reports/cucumber/cucumber-report.json",
+                 "reports/cucumber/cucumber-report_" + timestamp + ".json");
+    }
+
+    private void copyFile(String source, String destination) {
+        try {
+            File src = new File(source);
+            if (src.exists()) {
+                Files.copy(src.toPath(), Path.of(destination), StandardCopyOption.REPLACE_EXISTING);
+                logger.info("Report archived: " + destination);
+            }
+        } catch (Exception e) {
+            logger.warn("Could not archive report: " + e.getMessage());
         }
     }
 }

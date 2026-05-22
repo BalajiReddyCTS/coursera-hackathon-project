@@ -63,7 +63,7 @@ public class CourseSearchSteps {
         searchResultsPage.selectLevelFilter(level);
     }
 
-    @Then("the user extracts the first {int} courses with name, hours and rating")
+    @When("the user extracts the first {int} courses with name, hours and rating")
     public void theUserExtractsFirstNCourses(int count) {
         logger.info("STEP: Extracting " + count + " courses");
         ExtentReportManager.logInfo("Extracting " + count + " courses");
@@ -82,7 +82,7 @@ public class CourseSearchSteps {
         logger.info("Extraction complete. Got " + extractedCourses.size() + " courses.");
     }
 
-    @Then("the course data is saved to an Excel file")
+    @When("the course data is saved to an Excel file")
     public void theCourseDataIsSavedToExcel() {
         logger.info("STEP: Saving course data to Excel");
         softAssert.assertNotNull(extractedCourses, "Courses list is null");

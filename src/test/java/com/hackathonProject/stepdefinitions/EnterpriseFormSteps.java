@@ -45,12 +45,11 @@ public class EnterpriseFormSteps {
         String firstName = formData.get("firstName");
         String lastName  = formData.get("lastName");
         String email     = formData.get("email");
-        String phone     = formData.get("phone");
 
         logger.info("Form data: " + formData);
         ExtentReportManager.logInfo("Filling form: " + formData);
 
-        campusPage.fillFormWithInvalidEmail(firstName, lastName, email, phone);
+        campusPage.fillFormWithInvalidEmail(firstName, lastName, email);
 
         String screenshotPath = ScreenshotUtil.captureScreenshot(
             com.hackathonProject.base.BaseClass.getDriver(), "FormFilledWithInvalidEmail"
