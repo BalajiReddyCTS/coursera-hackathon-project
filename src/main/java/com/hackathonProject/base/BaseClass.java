@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import com.hackathonProject.utils.ConfigReader;
 
@@ -34,9 +35,20 @@ public class BaseClass {
         return ConfigReader.getProperty("browser");
     }
 
+    /**
+     * Reads -Dheadless=true from the JVM system properties (passed by Jenkins
+     * or the command line). Defaults to false so local runs stay visible.
+     */
+    private static boolean isHeadless() {
+        return "true".equalsIgnoreCase(System.getProperty("headless", "false"));
+    }
+
     public static void createDriver() {
         String browser = getCurrentBrowser();
-        logger.info("Launching browser: " + browser + " on thread: " + Thread.currentThread().getName());
+        boolean headless = isHeadless();
+        logger.info("Launching browser: " + browser
+                + " | headless=" + headless
+                + " | thread=" + Thread.currentThread().getName());
 
         WebDriver webDriver;
 
@@ -46,6 +58,12 @@ public class BaseClass {
             chromeOptions.addArguments("--disable-notifications");
             chromeOptions.addArguments("--no-sandbox");
             chromeOptions.addArguments("--disable-dev-shm-usage");
+            if (headless) {
+                chromeOptions.addArguments("--headless=new");
+                chromeOptions.addArguments("--window-size=1920,1080");
+                chromeOptions.addArguments("--disable-gpu");
+                logger.info("Chrome running in HEADLESS mode");
+            }
             WebDriverManager.chromedriver().setup();
             webDriver = new ChromeDriver(chromeOptions);
             logger.info("Chrome browser launched");
@@ -58,14 +76,27 @@ public class BaseClass {
             edgeOptions.addArguments("--disable-dev-shm-usage");
             // Force unique user data dir per thread to prevent session sharing
             String uniqueProfile = System.getProperty("java.io.tmpdir")
-                + "edge_profile_" + Thread.currentThread().threadId() + "_" + System.currentTimeMillis();
+                    + "edge_profile_" + Thread.currentThread().threadId() + "_" + System.currentTimeMillis();
             edgeOptions.addArguments("--user-data-dir=" + uniqueProfile);
+            if (headless) {
+                edgeOptions.addArguments("--headless=new");
+                edgeOptions.addArguments("--window-size=1920,1080");
+                edgeOptions.addArguments("--disable-gpu");
+                logger.info("Edge running in HEADLESS mode");
+            }
             webDriver = new EdgeDriver(edgeOptions);
             logger.info("Edge browser launched (via Selenium Manager) with unique profile");
 
         } else if (browser.equalsIgnoreCase("firefox")) {
+            FirefoxOptions firefoxOptions = new FirefoxOptions();
+            if (headless) {
+                firefoxOptions.addArguments("--headless");
+                firefoxOptions.addArguments("--width=1920");
+                firefoxOptions.addArguments("--height=1080");
+                logger.info("Firefox running in HEADLESS mode");
+            }
             WebDriverManager.firefoxdriver().setup();
-            webDriver = new FirefoxDriver();
+            webDriver = new FirefoxDriver(firefoxOptions);
             logger.info("Firefox browser launched");
 
         } else {
@@ -73,15 +104,15 @@ public class BaseClass {
         }
 
         webDriver.manage().timeouts().implicitlyWait(
-            Duration.ofSeconds(Integer.parseInt(ConfigReader.getProperty("implicitWait")))
+                Duration.ofSeconds(Integer.parseInt(ConfigReader.getProperty("implicitWait")))
         );
         webDriver.manage().timeouts().pageLoadTimeout(
-            Duration.ofSeconds(Integer.parseInt(ConfigReader.getProperty("maxWaitTime")))
+                Duration.ofSeconds(Integer.parseInt(ConfigReader.getProperty("maxWaitTime")))
         );
 
         driver.set(webDriver);
         logger.info("WebDriver [" + browser + "] created and stored in ThreadLocal. Session: "
-            + ((org.openqa.selenium.remote.RemoteWebDriver) webDriver).getSessionId());
+                + ((org.openqa.selenium.remote.RemoteWebDriver) webDriver).getSessionId());
     }
 
     public static WebDriver getDriver() {

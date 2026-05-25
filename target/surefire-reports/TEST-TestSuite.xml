@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="99.451" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="132.393" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="IN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-25\bin"/>
-    <property name="sun.java.command" value="C:\Users\2485865\AppData\Local\Temp\surefire4762809308033290111\surefirebooter-20260522173854517_3.jar C:\Users\2485865\AppData\Local\Temp\surefire4762809308033290111 2026-05-22T17-38-54_402-jvmRun1 surefire-20260522173854517_1tmp surefire_0-20260522173854517_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\2485865\AppData\Local\Temp\surefire10881974426904088680\surefirebooter-20260525155948534_3.jar C:\Users\2485865\AppData\Local\Temp\surefire10881974426904088680 2026-05-25T15-59-48_410-jvmRun1 surefire-20260525155948534_1tmp surefire_0-20260525155948534_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\2485865\Downloads\HackathonProject\CourseraAutomation\target\test-classes;C:\Users\2485865\Downloads\HackathonProject\CourseraAutomation\target\classes;C:\Users\2485865\.m2\repository\org\seleniumhq\selenium\selenium-java\4.18.1\selenium-java-4.18.1.jar;C:\Users\2485865\.m2\repository\org\seleniumhq\selenium\selenium-api\4.18.1\selenium-api-4.18.1.jar;C:\Users\2485865\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.18.1\selenium-chrome-driver-4.18.1.jar;C:\Users\2485865\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\2485865\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.18.1\selenium-chromium-driver-4.18.1.jar;C:\Users\2485865\.m2\repository\org\seleniumhq\selenium\selenium-json\4.18.1\selenium-json-4.18.1.jar;C:\Users\2485865\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.18.1\selenium-manager-4.18.1.jar;C:\Users\2485865\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v120\4.18.1\selenium-devtools-v120-4.18.1.jar;C:\Users\2485865\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v121\4.18.1\selenium-devtools-v121-4.18.1.jar;C:\Users\2485865\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v122\4.18.1\selenium-devtools-v122-4.18.1.jar;C:\Users\2485865\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.18.1\selenium-devtools-v85-4.18.1.jar;C:\Users\2485865\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.18.1\selenium-edge-driver-4.18.1.jar;C:\Users\2485865\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.18.1\selenium-firefox-driver-4.18.1.jar;C:\Users\2485865\.m2\repository\org\seleniumhq\selenium\selenium-http\4.18.1\selenium-http-4.18.1.jar;C:\Users\2485865\.m2\repository\dev\failsafe\failsafe\3.3.2\failsafe-3.3.2.jar;C:\Users\2485865\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.18.1\selenium-ie-driver-4.18.1.jar;C:\Users\2485865\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.18.1\selenium-remote-driver-4.18.1.jar;C:\Users\2485865\.m2\repository\com\google\guava\guava\33.0.0-jre\guava-33.0.0-jre.jar;C:\Users\2485865\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\2485865\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\2485865\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\2485865\.m2\repository\org\checkerframework\checker-qual\3.41.0\checker-qual-3.41.0.jar;C:\Users\2485865\.m2\repository\com\google\errorprone\error_prone_annotations\2.23.0\error_prone_annotations-2.23.0.jar;C:\Users\2485865\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\2485865\.m2\repository\io\opentelemetry\semconv\opentelemetry-semconv\1.23.1-alpha\opentelemetry-semconv-1.23.1-alpha.jar;C:\Users\2485865\.m2\repository\io\opentelemetry\opentelemetry-api\1.35.0\opentelemetry-api-1.35.0.jar;C:\Users\2485865\.m2\repository\io\opentelemetry\opentelemetry-context\1.35.0\opentelemetry-context-1.35.0.jar;C:\Users\2485865\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.35.0\opentelemetry-exporter-logging-1.35.0.jar;C:\Users\2485865\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.35.0\opentelemetry-sdk-common-1.35.0.jar;C:\Users\2485865\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.35.0\opentelemetry-sdk-extension-autoconfigure-spi-1.35.0.jar;C:\Users\2485865\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.35.0\opentelemetry-sdk-extension-autoconfigure-1.35.0.jar;C:\Users\2485865\.m2\repository\io\opentelemetry\opentelemetry-api-events\1.35.0-alpha\opentelemetry-api-events-1.35.0-alpha.jar;C:\Users\2485865\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.35.0\opentelemetry-sdk-trace-1.35.0.jar;C:\Users\2485865\.m2\repository\io\opentelemetry\opentelemetry-extension-incubator\1.35.0-alpha\opentelemetry-extension-incubator-1.35.0-alpha.jar;C:\Users\2485865\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.35.0\opentelemetry-sdk-1.35.0.jar;C:\Users\2485865\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.35.0\opentelemetry-sdk-metrics-1.35.0.jar;C:\Users\2485865\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.35.0\opentelemetry-sdk-logs-1.35.0.jar;C:\Users\2485865\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\2485865\.m2\repository\org\seleniumhq\selenium\selenium-os\4.18.1\selenium-os-4.18.1.jar;C:\Users\2485865\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\2485865\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.18.1\selenium-safari-driver-4.18.1.jar;C:\Users\2485865\.m2\repository\org\seleniumhq\selenium\selenium-support\4.18.1\selenium-support-4.18.1.jar;C:\Users\2485865\.m2\repository\io\github\bonigarcia\webdrivermanager\5.7.0\webdrivermanager-5.7.0.jar;C:\Users\2485865\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\2485865\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\2485865\.m2\repository\com\github\docker-java\docker-java\3.3.5\docker-java-3.3.5.jar;C:\Users\2485865\.m2\repository\com\github\docker-java\docker-java-core\3.3.5\docker-java-core-3.3.5.jar;C:\Users\2485865\.m2\repository\com\github\docker-java\docker-java-api\3.3.5\docker-java-api-3.3.5.jar;C:\Users\2485865\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\2485865\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\2485865\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\2485865\.m2\repository\org\bouncycastle\bcpkix-jdk18on\1.76\bcpkix-jdk18on-1.76.jar;C:\Users\2485865\.m2\repository\org\bouncycastle\bcprov-jdk18on\1.76\bcprov-jdk18on-1.76.jar;C:\Users\2485865\.m2\repository\org\bouncycastle\bcutil-jdk18on\1.76\bcutil-jdk18on-1.76.jar;C:\Users\2485865\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\2485865\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.3.5\docker-java-transport-httpclient5-3.3.5.jar;C:\Users\2485865\.m2\repository\com\github\docker-java\docker-java-transport\3.3.5\docker-java-transport-3.3.5.jar;C:\Users\2485865\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\2485865\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\2485865\.m2\repository\org\apache\commons\commons-lang3\3.14.0\commons-lang3-3.14.0.jar;C:\Users\2485865\.m2\repository\org\apache\commons\commons-compress\1.26.0\commons-compress-1.26.0.jar;C:\Users\2485865\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.2.1\httpclient5-5.2.1.jar;C:\Users\2485865\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.2\httpcore5-5.2.jar;C:\Users\2485865\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.2\httpcore5-h2-5.2.jar;C:\Users\2485865\.m2\repository\org\testng\testng\7.9.0\testng-7.9.0.jar;C:\Users\2485865\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\2485865\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\2485865\.m2\repository\io\cucumber\cucumber-java\7.15.0\cucumber-java-7.15.0.jar;C:\Users\2485865\.m2\repository\io\cucumber\cucumber-core\7.15.0\cucumber-core-7.15.0.jar;C:\Users\2485865\.m2\repository\io\cucumber\cucumber-gherkin\7.15.0\cucumber-gherkin-7.15.0.jar;C:\Users\2485865\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.15.0\cucumber-gherkin-messages-7.15.0.jar;C:\Users\2485865\.m2\repository\io\cucumber\messages\22.0.0\messages-22.0.0.jar;C:\Users\2485865\.m2\repository\io\cucumber\tag-expressions\6.0.0\tag-expressions-6.0.0.jar;C:\Users\2485865\.m2\repository\io\cucumber\cucumber-expressions\17.0.1\cucumber-expressions-17.0.1.jar;C:\Users\2485865\.m2\repository\io\cucumber\datatable\7.15.0\datatable-7.15.0.jar;C:\Users\2485865\.m2\repository\io\cucumber\cucumber-plugin\7.15.0\cucumber-plugin-7.15.0.jar;C:\Users\2485865\.m2\repository\io\cucumber\docstring\7.15.0\docstring-7.15.0.jar;C:\Users\2485865\.m2\repository\io\cucumber\html-formatter\20.4.0\html-formatter-20.4.0.jar;C:\Users\2485865\.m2\repository\io\cucumber\junit-xml-formatter\0.2.0\junit-xml-formatter-0.2.0.jar;C:\Users\2485865\.m2\repository\io\cucumber\ci-environment\10.0.0\ci-environment-10.0.0.jar;C:\Users\2485865\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\2485865\.m2\repository\io\cucumber\cucumber-testng\7.15.0\cucumber-testng-7.15.0.jar;C:\Users\2485865\.m2\repository\org\apache\poi\poi\5.2.5\poi-5.2.5.jar;C:\Users\2485865\.m2\repository\commons-codec\commons-codec\1.16.0\commons-codec-1.16.0.jar;C:\Users\2485865\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\2485865\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\2485865\.m2\repository\com\zaxxer\SparseBitSet\1.3\SparseBitSet-1.3.jar;C:\Users\2485865\.m2\repository\org\apache\poi\poi-ooxml\5.2.5\poi-ooxml-5.2.5.jar;C:\Users\2485865\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.5\poi-ooxml-lite-5.2.5.jar;C:\Users\2485865\.m2\repository\org\apache\xmlbeans\xmlbeans\5.2.0\xmlbeans-5.2.0.jar;C:\Users\2485865\.m2\repository\com\github\virtuald\curvesapi\1.08\curvesapi-1.08.jar;C:\Users\2485865\.m2\repository\com\aventstack\extentreports\5.1.1\extentreports-5.1.1.jar;C:\Users\2485865\.m2\repository\io\reactivex\rxjava3\rxjava\3.1.6\rxjava-3.1.6.jar;C:\Users\2485865\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\2485865\.m2\repository\org\freemarker\freemarker\2.3.32\freemarker-2.3.32.jar;C:\Users\2485865\.m2\repository\org\projectlombok\lombok\1.18.26\lombok-1.18.26.jar;C:\Users\2485865\.m2\repository\tech\grasshopper\extentreports-cucumber7-adapter\1.14.0\extentreports-cucumber7-adapter-1.14.0.jar;C:\Users\2485865\.m2\repository\tech\grasshopper\extent-pdf-report\2.12.0\extent-pdf-report-2.12.0.jar;C:\Users\2485865\.m2\repository\tech\grasshopper\cucumber-pdf-report\2.14.0\cucumber-pdf-report-2.14.0.jar;C:\Users\2485865\.m2\repository\org\apache\pdfbox\pdfbox\2.0.26\pdfbox-2.0.26.jar;C:\Users\2485865\.m2\repository\org\apache\pdfbox\fontbox\2.0.26\fontbox-2.0.26.jar;C:\Users\2485865\.m2\repository\org\knowm\xchart\xchart\3.8.0\xchart-3.8.0.jar;C:\Users\2485865\.m2\repository\de\erichseifert\vectorgraphics2d\VectorGraphics2D\0.13\VectorGraphics2D-0.13.jar;C:\Users\2485865\.m2\repository\de\rototor\pdfbox\graphics2d\0.30\graphics2d-0.30.jar;C:\Users\2485865\.m2\repository\com\madgag\animated-gif-lib\1.4\animated-gif-lib-1.4.jar;C:\Users\2485865\.m2\repository\org\yaml\snakeyaml\2.0\snakeyaml-2.0.jar;C:\Users\2485865\.m2\repository\tech\grasshopper\table-layout\1.5.1\table-layout-1.5.1.jar;C:\Users\2485865\.m2\repository\tech\grasshopper\rest-assured-cucumber-pdf-report\1.5.0\rest-assured-cucumber-pdf-report-1.5.0.jar;C:\Users\2485865\.m2\repository\org\jsoup\jsoup\1.15.3\jsoup-1.15.3.jar;C:\Users\2485865\.m2\repository\com\aventstack\klov-reporter\5.1.0\klov-reporter-5.1.0.jar;C:\Users\2485865\.m2\repository\org\mongodb\mongodb-driver\3.6.4\mongodb-driver-3.6.4.jar;C:\Users\2485865\.m2\repository\org\mongodb\mongodb-driver-core\3.6.4\mongodb-driver-core-3.6.4.jar;C:\Users\2485865\.m2\repository\org\mongodb\bson\3.6.4\bson-3.6.4.jar;C:\Users\2485865\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\2485865\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\2485865\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\2485865\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\2485865\.m2\repository\tech\grasshopper\htmlextentreporter\1.1.0\htmlextentreporter-1.1.0.jar;C:\Users\2485865\.m2\repository\tech\grasshopper\extent-excel-report\1.4.0\extent-excel-report-1.4.0.jar;C:\Users\2485865\.m2\repository\io\qameta\allure\allure-cucumber7-jvm\2.25.0\allure-cucumber7-jvm-2.25.0.jar;C:\Users\2485865\.m2\repository\io\qameta\allure\allure-java-commons\2.25.0\allure-java-commons-2.25.0.jar;C:\Users\2485865\.m2\repository\io\qameta\allure\allure-model\2.25.0\allure-model-2.25.0.jar;C:\Users\2485865\.m2\repository\io\cucumber\gherkin\26.2.0\gherkin-26.2.0.jar;C:\Users\2485865\.m2\repository\io\qameta\allure\allure-testng\2.25.0\allure-testng-2.25.0.jar;C:\Users\2485865\.m2\repository\io\qameta\allure\allure-test-filter\2.25.0\allure-test-filter-2.25.0.jar;C:\Users\2485865\.m2\repository\org\apache\logging\log4j\log4j-core\2.22.0\log4j-core-2.22.0.jar;C:\Users\2485865\.m2\repository\org\apache\logging\log4j\log4j-api\2.22.0\log4j-api-2.22.0.jar;C:\Users\2485865\.m2\repository\commons-io\commons-io\2.15.1\commons-io-2.15.1.jar;"/>
     <property name="allure.results.directory" value="C:\Users\2485865\Downloads\HackathonProject\CourseraAutomation\target/allure-results"/>
@@ -32,7 +32,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\2485865\AppData\Local\Temp\surefire4762809308033290111\surefirebooter-20260522173854517_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\2485865\AppData\Local\Temp\surefire10881974426904088680\surefirebooter-20260525155948534_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="25.0.1+8-LTS-27"/>
@@ -65,179 +65,175 @@
     <property name="maven.repo.local" value="C:\Users\2485865\.m2\repository"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="runScenario[&quot;Verify email validation error on business contact form&quot;, &quot;Business Contact Form - Invalid Email Validation&quot;](1)" classname="com.hackathonProject.runners.TestRunner" time="46.962">
+  <testcase name="runScenario[&quot;Verify email validation error on business contact form&quot;, &quot;Business Contact Form - Invalid Email Validation&quot;](1)" classname="com.hackathonProject.runners.TestRunner" time="55.88">
     <system-out><![CDATA[
 @LanguageLearning @Smoke @LanguageLearning
 Scenario: Extract all languages and levels from Language Learning category        # src/test/resources/features/LanguageLearning.feature:13
-17:38:57.068 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener - ▶ SCENARIO STARTED: [Extract all languages and levels from Language Learning category] in [file:///C:/Users/2485865/Downloads/HackathonProject/CourseraAutomation/src/test/resources/features/LanguageLearning.feature]
+15:59:52.034 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener - ▶ SCENARIO STARTED: [Extract all languages and levels from Language Learning category] in [file:///C:/Users/2485865/Downloads/HackathonProject/CourseraAutomation/src/test/resources/features/LanguageLearning.feature]
 
 @EnterpriseForm @Smoke @EnterpriseForm
 Scenario: Verify email validation error on business contact form  # src/test/resources/features/EnterpriseForm.feature:21
-17:38:57.078 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener - ▶ SCENARIO STARTED: [Verify email validation error on business contact form] in [file:///C:/Users/2485865/Downloads/HackathonProject/CourseraAutomation/src/test/resources/features/EnterpriseForm.feature]
+15:59:52.069 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener - ▶ SCENARIO STARTED: [Verify email validation error on business contact form] in [file:///C:/Users/2485865/Downloads/HackathonProject/CourseraAutomation/src/test/resources/features/EnterpriseForm.feature]
 
 @CourseSearch @Smoke @CourseSearch
 Scenario: Search web development courses for beginners in English and save to Excel # src/test/resources/features/CourseSearch.feature:16
-17:38:57.084 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener - ▶ SCENARIO STARTED: [Search web development courses for beginners in English and save to Excel] in [file:///C:/Users/2485865/Downloads/HackathonProject/CourseraAutomation/src/test/resources/features/CourseSearch.feature]
-17:38:57.088 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO STARTED: Search web development courses for beginners in English and save to Excel ======
-17:38:57.088 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO STARTED: Verify email validation error on business contact form ======
-17:38:57.088 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO STARTED: Extract all languages and levels from Language Learning category ======
-17:38:57.089 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - Tags: [@CourseSearch, @Smoke, @CourseSearch]
-17:38:57.089 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - Tags: [@EnterpriseForm, @Smoke, @EnterpriseForm]
-17:38:57.089 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - Tags: [@LanguageLearning, @Smoke, @LanguageLearning]
-17:38:57.093 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.ConfigReader - config.properties loaded successfully
-17:38:57.094 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - Launching browser: edge on thread: TestNG-PoolService-1
-17:38:57.094 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - Launching browser: edge on thread: TestNG-PoolService-3
-17:38:57.094 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - Launching browser: edge on thread: TestNG-PoolService-2
-17:39:02.711 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - Edge browser launched (via Selenium Manager) with unique profile
-17:39:02.711 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - Edge browser launched (via Selenium Manager) with unique profile
-17:39:02.745 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - WebDriver [edge] created and stored in ThreadLocal. Session: bdb52aa8af21985766aca9bd3469f588
-17:39:02.753 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - WebDriver [edge] created and stored in ThreadLocal. Session: 49d8dfd60f139345090c0deff96bd835
-17:39:02.757 [TestNG-PoolService-3] INFO  com.hackathonProject.utils.ExtentReportManager - ExtentReports initialised at: reports/extent/ExtentReport_2026-05-22_17-39-02.html
-17:39:02.763 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - Browser launched successfully
-17:39:02.765 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - Browser launched successfully
-17:39:02.806 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Navigating to Language Learning category
-17:39:02.888 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Navigating to Coursera For Business page
-17:39:02.971 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - Edge browser launched (via Selenium Manager) with unique profile
-17:39:03.024 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - WebDriver [edge] created and stored in ThreadLocal. Session: 0cd253dd6af49023d43d8eb52abdd4fe
-17:39:03.026 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - Browser launched successfully
-17:39:03.041 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Opening Coursera home page
-17:39:03.046 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.HomePage - Navigating to: https://www.coursera.org
-  Given the user navigates to the Coursera For Business page      # com.hackathonProject.stepdefinitions.EnterpriseFormSteps.theUserNavigatesToForBusiness()
-17:39:20.247 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user navigates to the Coursera For Business page
-17:39:20.249 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Clicking Contact Sales / scrolling to form
-17:39:20.250 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Scrolling to form section
-17:39:20.278 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.JavaScriptUtil - Scrolled by 2000 pixels
-17:39:20.337 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Home page opened successfully
-  Given the user is on the Coursera home page                                       # com.hackathonProject.stepdefinitions.CourseSearchSteps.theUserIsOnCourseraHomePage()
-17:39:20.338 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user is on the Coursera home page
-17:39:20.341 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Searching for: web development courses for beginners
-17:39:20.341 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.HomePage - Searching for: web development courses for beginners
-17:39:20.362 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Marketo form found
-  When the user clicks on Contact Sales                           # com.hackathonProject.stepdefinitions.EnterpriseFormSteps.theUserClicksContactSales()
-17:39:20.362 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user clicks on Contact Sales
-17:39:20.386 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Filling contact form with DataTable values
-17:39:20.388 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - Form data: {firstName=Srijita, lastName=Baksi, email=srijitacogniznat.com}
-17:39:20.388 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Filling form with invalid email: srijitacogniznat.com
-17:39:20.986 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Entered First Name: Srijita
-17:39:21.305 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Entered Last Name: Baksi
+15:59:52.078 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener - ▶ SCENARIO STARTED: [Search web development courses for beginners in English and save to Excel] in [file:///C:/Users/2485865/Downloads/HackathonProject/CourseraAutomation/src/test/resources/features/CourseSearch.feature]
+15:59:52.085 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO STARTED: Extract all languages and levels from Language Learning category ======
+15:59:52.085 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO STARTED: Verify email validation error on business contact form ======
+15:59:52.085 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO STARTED: Search web development courses for beginners in English and save to Excel ======
+15:59:52.086 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - Tags: [@CourseSearch, @Smoke, @CourseSearch]
+15:59:52.086 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - Tags: [@LanguageLearning, @Smoke, @LanguageLearning]
+15:59:52.086 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - Tags: [@EnterpriseForm, @Smoke, @EnterpriseForm]
+15:59:52.093 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.ConfigReader - config.properties loaded successfully
+15:59:52.094 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - Launching browser: edge on thread: TestNG-PoolService-2
+15:59:52.094 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - Launching browser: edge on thread: TestNG-PoolService-3
+15:59:52.094 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - Launching browser: edge on thread: TestNG-PoolService-1
+15:59:59.685 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - Edge browser launched (via Selenium Manager) with unique profile
+15:59:59.696 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - Edge browser launched (via Selenium Manager) with unique profile
+15:59:59.711 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - WebDriver [edge] created and stored in ThreadLocal. Session: 122a9b1f72776ad0244a7e497c0a5714
+15:59:59.730 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.ExtentReportManager - ExtentReports initialised at: reports/extent/ExtentReport_2026-05-25_15-59-59.html
+15:59:59.740 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - Browser launched successfully
+15:59:59.754 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - WebDriver [edge] created and stored in ThreadLocal. Session: 739b1d335d0f8bc176011bcf6fef3e3d
+15:59:59.757 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - Browser launched successfully
+15:59:59.894 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Navigating to Coursera For Business page
+15:59:59.906 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Opening Coursera home page
+15:59:59.928 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.HomePage - Navigating to: https://www.coursera.org
+16:00:01.065 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - Edge browser launched (via Selenium Manager) with unique profile
+16:00:01.097 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - WebDriver [edge] created and stored in ThreadLocal. Session: acc217e1ca5aceef6e80a6a0074bb941
+16:00:01.098 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - Browser launched successfully
+16:00:01.121 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Navigating to Language Learning category
   Given the user navigates to the Language Learning category                      # com.hackathonProject.stepdefinitions.LanguageLearningSteps.theUserNavigatesToLanguageLearning()
-17:39:24.871 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user navigates to the Language Learning category
-17:39:24.873 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Opening Language filter dropdown
-17:39:24.873 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Extracting all language filter options
-17:39:25.787 [TestNG-PoolService-3] INFO  com.hackathonProject.utils.JavaScriptUtil - JavaScript click performed on element
-17:39:35.846 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Clicked 'Language' section
-17:39:41.774 [TestNG-PoolService-2] WARN  com.hackathonProject.utils.WaitUtil - Element not visible within timeout
-17:39:41.774 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Entered invalid email: srijitacogniznat.com
-17:39:41.774 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Form filled successfully
-17:39:41.969 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.ScreenshotUtil - Screenshot saved: C:\Users\2485865\Downloads\HackathonProject\CourseraAutomation\screenshots\FormFilledWithInvalidEmail_2026-05-22_17-39-41.png
+16:00:19.884 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user navigates to the Language Learning category
+16:00:19.887 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Opening Language filter dropdown
+16:00:19.888 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Extracting all language filter options
+16:00:20.688 [TestNG-PoolService-3] INFO  com.hackathonProject.utils.JavaScriptUtil - JavaScript click performed on element
+  Given the user navigates to the Coursera For Business page      # com.hackathonProject.stepdefinitions.EnterpriseFormSteps.theUserNavigatesToForBusiness()
+16:00:22.958 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user navigates to the Coursera For Business page
+16:00:22.963 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Clicking Contact Sales / scrolling to form
+16:00:22.965 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Scrolling to form section
+16:00:22.990 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.JavaScriptUtil - Scrolled by 2000 pixels
+16:00:23.071 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Marketo form found
+  When the user clicks on Contact Sales                           # com.hackathonProject.stepdefinitions.EnterpriseFormSteps.theUserClicksContactSales()
+16:00:23.072 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user clicks on Contact Sales
+16:00:23.092 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Filling contact form with DataTable values
+16:00:23.096 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - Form data: {firstName=Srijita, lastName=Baksi, email=srijitacogniznat.com}
+16:00:23.097 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Filling form with invalid email: srijitacogniznat.com
+16:00:23.691 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Home page opened successfully
+  Given the user is on the Coursera home page                                       # com.hackathonProject.stepdefinitions.CourseSearchSteps.theUserIsOnCourseraHomePage()
+16:00:23.693 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user is on the Coursera home page
+16:00:23.696 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Searching for: web development courses for beginners
+16:00:23.697 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.HomePage - Searching for: web development courses for beginners
+16:00:23.853 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Entered First Name: Srijita
+16:00:24.254 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Entered Last Name: Baksi
+16:00:30.761 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Clicked 'Language' section
+16:00:42.610 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Total languages: 62
+  When the user opens the language filter dropdown                                # com.hackathonProject.stepdefinitions.LanguageLearningSteps.theUserOpensLanguageFilterDropdown()
+16:00:42.611 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user opens the language filter dropdown
+16:00:42.613 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Opening Level filter dropdown
+16:00:42.614 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Extracting all level filter options
+16:00:44.830 [TestNG-PoolService-2] WARN  com.hackathonProject.utils.WaitUtil - Element not visible within timeout
+16:00:44.830 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Entered invalid email: srijitacogniznat.com
+16:00:44.830 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Form filled successfully
+16:00:45.079 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.ScreenshotUtil - Screenshot saved: C:\Users\2485865\Downloads\HackathonProject\CourseraAutomation\screenshots\FormFilledWithInvalidEmail_2026-05-25_16-00-45.png
   And the user fills the contact form with the following details: # com.hackathonProject.stepdefinitions.EnterpriseFormSteps.theUserFillsContactForm(io.cucumber.datatable.DataTable)
     | firstName | lastName | email                |
     | Srijita   | Baksi    | srijitacogniznat.com |
-17:39:41.973 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user fills the contact form with the following details:
-17:39:41.975 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Checking for email validation error message
-17:39:42.119 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Submit clicked
-17:39:42.120 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Capturing email error message
-17:39:42.218 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Error: Must be valid email.
+16:00:45.094 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user fills the contact form with the following details:
+16:00:45.098 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Checking for email validation error message
+16:00:45.260 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Submit clicked
+16:00:45.260 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Capturing email error message
+16:00:45.384 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Error: Must be valid email.
 example@yourdomain.com
-17:39:42.218 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - Captured error message: Must be valid email.
+16:00:45.384 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - Captured error message: Must be valid email.
 example@yourdomain.com
-17:39:42.405 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.ScreenshotUtil - Screenshot saved: C:\Users\2485865\Downloads\HackathonProject\CourseraAutomation\screenshots\EmailValidationError_2026-05-22_17-39-42.png
+16:00:45.615 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.ScreenshotUtil - Screenshot saved: C:\Users\2485865\Downloads\HackathonProject\CourseraAutomation\screenshots\EmailValidationError_2026-05-25_16-00-45.png
   Then an email validation error message should be displayed      # com.hackathonProject.stepdefinitions.EnterpriseFormSteps.anEmailValidationErrorShouldBeDisplayed()
-17:39:42.410 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: an email validation error message should be displayed
-17:39:42.412 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Asserting error message contains: valid email
-17:39:42.412 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - Assertion PASSED: Must be valid email.
+16:00:45.623 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: an email validation error message should be displayed
+16:00:45.627 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Asserting error message contains: valid email
+16:00:45.629 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - Assertion PASSED: Must be valid email.
 example@yourdomain.com
   And the error message should contain "valid email"              # com.hackathonProject.stepdefinitions.EnterpriseFormSteps.theErrorMessageShouldContain(java.lang.String)
-17:39:42.414 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the error message should contain "valid email"
-17:39:42.418 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO FINISHED: Verify email validation error on business contact form | Status: PASSED ======
-17:39:42.419 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - Quitting edge browser on thread: TestNG-PoolService-2
-17:39:43.718 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - Browser closed. Scenario teardown complete.
-17:39:43.806 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener - ■ SCENARIO PASSED: [Verify email validation error on business contact form] in 46.78s
+16:00:45.632 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the error message should contain "valid email"
+16:00:45.638 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO FINISHED: Verify email validation error on business contact form | Status: PASSED ======
+16:00:45.641 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - Quitting edge browser on thread: TestNG-PoolService-2
+16:00:47.460 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - Browser closed. Scenario teardown complete.
+16:00:47.579 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener - ■ SCENARIO PASSED: [Verify email validation error on business contact form] in 55.63s
 ]]></system-out>
     <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
 SLF4J(W): Defaulting to no-operation (NOP) logger implementation
 SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
-May 22, 2026 5:38:58 PM org.openqa.selenium.manager.SeleniumManager lambda$runCommand$1
+May 25, 2026 3:59:54 PM org.openqa.selenium.manager.SeleniumManager lambda$runCommand$1
 WARNING: There was an error managing msedgedriver (error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_148_WINDOWS): error trying to connect: dns error: No such host is known. (os error 11001)); using driver found in the cache
-May 22, 2026 5:38:58 PM org.openqa.selenium.manager.SeleniumManager lambda$runCommand$1
+May 25, 2026 3:59:54 PM org.openqa.selenium.manager.SeleniumManager lambda$runCommand$1
 WARNING: There was an error managing msedgedriver (error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_148_WINDOWS): error trying to connect: dns error: No such host is known. (os error 11001)); using driver found in the cache
-May 22, 2026 5:38:58 PM org.openqa.selenium.manager.SeleniumManager lambda$runCommand$1
+May 25, 2026 3:59:54 PM org.openqa.selenium.manager.SeleniumManager lambda$runCommand$1
 WARNING: There was an error managing msedgedriver (error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_148_WINDOWS): error trying to connect: dns error: No such host is known. (os error 11001)); using driver found in the cache
-May 22, 2026 5:39:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 25, 2026 3:59:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 148
-May 22, 2026 5:39:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 25, 2026 3:59:59 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 148.0.3967.83. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+May 25, 2026 3:59:59 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 148
-May 22, 2026 5:39:02 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 148.0.3967.70. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-May 22, 2026 5:39:02 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 148.0.3967.70. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-May 22, 2026 5:39:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 25, 2026 3:59:59 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 148.0.3967.83. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+May 25, 2026 4:00:01 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 148
-May 22, 2026 5:39:02 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 148.0.3967.70. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+May 25, 2026 4:00:01 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 148.0.3967.83. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.18.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Extract all languages and levels from Language Learning category&quot;, &quot;Language Learning - Extract Languages and Levels&quot;](2)" classname="com.hackathonProject.runners.TestRunner" time="83.008">
-    <system-out><![CDATA[17:39:47.654 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Total languages: 62
-  When the user opens the language filter dropdown                                # com.hackathonProject.stepdefinitions.LanguageLearningSteps.theUserOpensLanguageFilterDropdown()
-17:39:47.655 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user opens the language filter dropdown
-17:39:47.656 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Opening Level filter dropdown
-17:39:47.656 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Extracting all level filter options
-17:39:48.549 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.HomePage - Search submitted. URL: https://www.coursera.org/search?query=web%20development%20courses%20for%20beginners
+  <testcase name="runScenario[&quot;Extract all languages and levels from Language Learning category&quot;, &quot;Language Learning - Extract Languages and Levels&quot;](2)" classname="com.hackathonProject.runners.TestRunner" time="77.933">
+    <system-out><![CDATA[16:00:57.909 [TestNG-PoolService-3] INFO  com.hackathonProject.utils.JavaScriptUtil - JavaScript click performed on element
+16:01:00.750 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.HomePage - Search submitted. URL: https://www.coursera.org/search?query=web%20development%20courses%20for%20beginners
   When the user searches for "web development courses for beginners"                # com.hackathonProject.stepdefinitions.CourseSearchSteps.theUserSearchesFor(java.lang.String)
-17:39:48.550 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user searches for "web development courses for beginners"
-17:39:48.551 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Applying language filter: English
-17:39:48.552 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Applying language filter: English
-  And the user applies the language filter "English"                                # com.hackathonProject.stepdefinitions.CourseSearchSteps.theUserAppliesLanguageFilter(java.lang.String)
-17:40:05.597 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user applies the language filter "English"
-17:40:05.598 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Applying level filter: Beginner
-17:40:05.598 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Applying level filter: Beginner
-17:40:08.305 [TestNG-PoolService-3] INFO  com.hackathonProject.utils.JavaScriptUtil - JavaScript click performed on element
-17:40:18.364 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Clicked 'Level' section
-17:40:18.525 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Beginner → 5018
-17:40:18.525 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Intermediate → 4319
-17:40:18.527 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Advanced → 457
-17:40:18.527 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Mixed → 1340
-17:40:18.527 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Total levels: 4
+16:01:00.751 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user searches for "web development courses for beginners"
+16:01:00.753 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Applying language filter: English
+16:01:00.754 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Applying language filter: English
+16:01:07.965 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Clicked 'Level' section
+16:01:08.096 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Beginner → 5035
+16:01:08.096 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Intermediate → 4338
+16:01:08.098 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Advanced → 458
+16:01:08.098 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Mixed → 1374
+16:01:08.098 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Total levels: 4
   And the user opens the level filter dropdown                                    # com.hackathonProject.stepdefinitions.LanguageLearningSteps.theUserOpensLevelFilterDropdown()
-17:40:18.528 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user opens the level filter dropdown
-17:40:18.530 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Verifying languages were captured
-17:40:18.531 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - 
+16:01:08.099 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user opens the level filter dropdown
+16:01:08.101 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Verifying languages were captured
+16:01:08.103 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - 
 ===== LANGUAGES EXTRACTED =====
-  English                   → 10479 courses
-  Kazakh                    → 4403 courses
-  Spanish                   → 4344 courses
-  French                    → 4268 courses
-  Arabic                    → 4171 courses
-  German                    → 4152 courses
-  Portuguese                → 3010 courses
-  Indonesian                → 2961 courses
-  Chinese                   → 2801 courses
-  Hungarian                 → 2733 courses
-  Russian                   → 2664 courses
-  Japanese                  → 2659 courses
-  Korean                    → 2643 courses
-  Hindi                     → 2567 courses
-  Italian                   → 2555 courses
-  Turkish                   → 2511 courses
-  Thai                      → 2477 courses
-  Ukrainian                 → 2456 courses
-  Dutch                     → 2445 courses
-  Greek                     → 2444 courses
-  Polish                    → 2442 courses
-  Swedish                   → 2424 courses
-  Uzbek                     → 1934 courses
-  Pushto                    → 1810 courses
-  Vietnamese                → 1810 courses
-  Azerbaijani               → 1597 courses
-  Urdu                      → 1351 courses
-  Bengali                   → 1343 courses
+  English                   → 10551 courses
+  Kazakh                    → 4417 courses
+  Spanish                   → 4356 courses
+  French                    → 4282 courses
+  Arabic                    → 4184 courses
+  German                    → 4165 courses
+  Portuguese                → 3019 courses
+  Indonesian                → 2970 courses
+  Chinese                   → 2811 courses
+  Hungarian                 → 2739 courses
+  Russian                   → 2674 courses
+  Japanese                  → 2668 courses
+  Korean                    → 2652 courses
+  Hindi                     → 2578 courses
+  Italian                   → 2566 courses
+  Turkish                   → 2520 courses
+  Thai                      → 2487 courses
+  Ukrainian                 → 2466 courses
+  Dutch                     → 2455 courses
+  Greek                     → 2454 courses
+  Polish                    → 2451 courses
+  Swedish                   → 2434 courses
+  Uzbek                     → 1949 courses
+  Vietnamese                → 1820 courses
+  Pushto                    → 1818 courses
+  Azerbaijani               → 1607 courses
+  Urdu                      → 1354 courses
+  Bengali                   → 1346 courses
   Oriya                     → 234 courses
-  Malay                     → 190 courses
+  Malay                     → 202 courses
   Haitian (Haitian Creole)  → 90 courses
   Persian                   → 62 courses
   Khmer                     → 37 courses
-  Romanian                  → 31 courses
+  Romanian                  → 30 courses
   Hebrew                    → 29 courses
   Serbian                   → 23 courses
   Afrikaans                 → 19 courses
@@ -268,72 +264,76 @@ WARNING: Unable to find version of CDP to use for 148.0.3967.70. You may need to
   Tagalog                   → 1 courses
 ================================
   Then all available languages with their counts should be captured and displayed # com.hackathonProject.stepdefinitions.LanguageLearningSteps.allLanguagesShouldBeCaptured()
-17:40:18.533 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: all available languages with their counts should be captured and displayed
-17:40:18.535 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Verifying levels were captured
-17:40:18.536 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - 
+16:01:08.106 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: all available languages with their counts should be captured and displayed
+16:01:08.108 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Verifying levels were captured
+16:01:08.109 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - 
 ===== LEVELS EXTRACTED =====
-  Beginner                  → 5018 courses
-  Intermediate              → 4319 courses
-  Advanced                  → 457 courses
-  Mixed                     → 1340 courses
+  Beginner                  → 5035 courses
+  Intermediate              → 4338 courses
+  Advanced                  → 458 courses
+  Mixed                     → 1374 courses
 ============================
   And all available levels with their counts should be captured and displayed     # com.hackathonProject.stepdefinitions.LanguageLearningSteps.allLevelsShouldBeCaptured()
-17:40:18.537 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: all available levels with their counts should be captured and displayed
-17:40:18.543 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Asserting language count >= 5
-17:40:18.546 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - Language count: 62 >= 5
+16:01:08.110 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: all available levels with their counts should be captured and displayed
+16:01:08.119 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Asserting language count >= 5
+16:01:08.120 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - Language count: 62 >= 5
   And the language list should contain at least 5 languages                       # com.hackathonProject.stepdefinitions.LanguageLearningSteps.languageListShouldHaveAtLeast(int)
-17:40:18.547 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the language list should contain at least 5 languages
-17:40:18.548 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Asserting level count >= 2
-17:40:18.549 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - Level count: 4 >= 2
+16:01:08.122 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the language list should contain at least 5 languages
+16:01:08.124 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Asserting level count >= 2
+16:01:08.124 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - Level count: 4 >= 2
   And the level list should contain at least 2 levels                             # com.hackathonProject.stepdefinitions.LanguageLearningSteps.levelListShouldHaveAtLeast(int)
-17:40:18.549 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the level list should contain at least 2 levels
-17:40:18.550 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO FINISHED: Extract all languages and levels from Language Learning category | Status: PASSED ======
-17:40:18.550 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - Quitting edge browser on thread: TestNG-PoolService-3
-17:40:19.847 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - Browser closed. Scenario teardown complete.
-17:40:19.857 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener - ■ SCENARIO PASSED: [Extract all languages and levels from Language Learning category] in 82.90s
+16:01:08.125 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the level list should contain at least 2 levels
+16:01:08.126 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO FINISHED: Extract all languages and levels from Language Learning category | Status: PASSED ======
+16:01:08.127 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - Quitting edge browser on thread: TestNG-PoolService-3
+16:01:09.630 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - Browser closed. Scenario teardown complete.
+16:01:09.638 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener - ■ SCENARIO PASSED: [Extract all languages and levels from Language Learning category] in 77.80s
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario[&quot;Search web development courses for beginners in English and save to Excel&quot;, &quot;Course Search - Web Development Courses&quot;](3)" classname="com.hackathonProject.runners.TestRunner" time="96.88">
-    <system-out><![CDATA[  And the user applies the level filter "Beginner"                                  # com.hackathonProject.stepdefinitions.CourseSearchSteps.theUserAppliesLevelFilter(java.lang.String)
-17:40:20.787 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user applies the level filter "Beginner"
-17:40:20.788 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Extracting 5 courses
-17:40:20.788 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracting top 5 courses
-17:40:30.825 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.JavaScriptUtil - Scrolled by 800 pixels
-17:40:30.948 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.JavaScriptUtil - Scrolled to top of page
-17:40:31.037 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Found 11 course cards
-17:40:31.099 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 1. Web Development for Beginners | Rating: 4.7 | Hours: 3 - 6 Months
-17:40:31.134 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 2. Introduction to Web Development with HTML, CSS, JavaScript | Rating: 4.6 | Hours: 1 - 3 Months
-17:40:31.172 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 3. Front-End Web Development for Beginners | Rating: 4.6 | Hours: 1 - 3 Months
-17:40:31.218 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 4. Introduction to Web Development and HTML Basics | Rating: N/A | Hours: 1 - 3 Months
-17:40:31.249 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 5. Introduction to HTML, CSS, & JavaScript | Rating: 4.4 | Hours: 1 - 4 Weeks
-17:40:31.249 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Total extracted: 5
-17:40:31.249 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 1. Web Development for Beginners | Rating: 4.7 | Hours: 3 - 6 Months
-17:40:31.251 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 2. Introduction to Web Development with HTML, CSS, JavaScript | Rating: 4.6 | Hours: 1 - 3 Months
-17:40:31.251 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 3. Front-End Web Development for Beginners | Rating: 4.6 | Hours: 1 - 3 Months
-17:40:31.251 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 4. Introduction to Web Development and HTML Basics | Rating: N/A | Hours: 1 - 3 Months
-17:40:31.251 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 5. Introduction to HTML, CSS, & JavaScript | Rating: 4.4 | Hours: 1 - 4 Weeks
-17:40:31.251 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Extraction complete. Got 5 courses.
+  <testcase name="runScenario[&quot;Search web development courses for beginners in English and save to Excel&quot;, &quot;Course Search - Web Development Courses&quot;](3)" classname="com.hackathonProject.runners.TestRunner" time="129.298">
+    <system-out><![CDATA[  And the user applies the language filter "English"                                # com.hackathonProject.stepdefinitions.CourseSearchSteps.theUserAppliesLanguageFilter(java.lang.String)
+16:01:24.035 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user applies the language filter "English"
+16:01:24.037 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Applying level filter: Beginner
+16:01:24.037 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Applying level filter: Beginner
+  And the user applies the level filter "Beginner"                                  # com.hackathonProject.stepdefinitions.CourseSearchSteps.theUserAppliesLevelFilter(java.lang.String)
+16:01:47.545 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user applies the level filter "Beginner"
+16:01:47.546 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Extracting 5 courses
+16:01:47.546 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracting top 5 courses
+16:01:57.581 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.JavaScriptUtil - Scrolled by 800 pixels
+16:01:57.684 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.JavaScriptUtil - Scrolled to top of page
+16:01:57.757 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Found 11 course cards
+16:01:57.825 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 1. Web Development for Beginners | Rating: 4.7 | Hours: 3 - 6 Months
+16:01:57.868 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 2. Introduction to Web Development with HTML, CSS, JavaScript | Rating: 4.6 | Hours: 1 - 3 Months
+16:01:57.889 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 3. Front-End Web Development for Beginners | Rating: 4.6 | Hours: 1 - 3 Months
+16:01:57.910 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 4. Introduction to Web Development and HTML Basics | Rating: N/A | Hours: 1 - 3 Months
+16:01:57.932 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 5. Introduction to HTML, CSS, & JavaScript | Rating: 4.4 | Hours: 1 - 4 Weeks
+16:01:57.933 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Total extracted: 5
+16:01:57.933 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 1. Web Development for Beginners | Rating: 4.7 | Hours: 3 - 6 Months
+16:01:57.934 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 2. Introduction to Web Development with HTML, CSS, JavaScript | Rating: 4.6 | Hours: 1 - 3 Months
+16:01:57.934 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 3. Front-End Web Development for Beginners | Rating: 4.6 | Hours: 1 - 3 Months
+16:01:57.934 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 4. Introduction to Web Development and HTML Basics | Rating: N/A | Hours: 1 - 3 Months
+16:01:57.934 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 5. Introduction to HTML, CSS, & JavaScript | Rating: 4.4 | Hours: 1 - 4 Weeks
+16:01:57.934 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Extraction complete. Got 5 courses.
   And the user extracts the first 5 courses with name, hours and rating             # com.hackathonProject.stepdefinitions.CourseSearchSteps.theUserExtractsFirstNCourses(int)
-17:40:31.251 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user extracts the first 5 courses with name, hours and rating
-17:40:31.251 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Saving course data to Excel
-17:40:31.251 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Saving 5 courses to Excel: src/test/resources/testdata/CourseData.xlsx
-17:40:31.256 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.ExcelDataWriter - Writing 5 courses to Excel: src/test/resources/testdata/CourseData.xlsx
-17:40:32.591 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.ExcelDataWriter - Excel file saved: src/test/resources/testdata/CourseData.xlsx
-17:40:32.599 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Excel saved successfully: src/test/resources/testdata/CourseData.xlsx
+16:01:57.937 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user extracts the first 5 courses with name, hours and rating
+16:01:57.938 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Saving course data to Excel
+16:01:57.939 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Saving 5 courses to Excel: src/test/resources/testdata/CourseData.xlsx
+16:01:57.942 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.ExcelDataWriter - Writing 5 courses to Excel: src/test/resources/testdata/CourseData.xlsx
+16:01:59.754 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.ExcelDataWriter - Excel file saved: src/test/resources/testdata/CourseData.xlsx
+16:01:59.766 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Excel saved successfully: src/test/resources/testdata/CourseData.xlsx
   And the course data is saved to an Excel file                                     # com.hackathonProject.stepdefinitions.CourseSearchSteps.theCourseDataIsSavedToExcel()
-17:40:32.600 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the course data is saved to an Excel file
-17:40:32.602 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Verifying search results page
-17:40:32.611 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Search results page verified. URL: https://www.coursera.org/search?query=web%20development%20courses%20for%20beginners&language=English&productDifficultyLevel=Beginner
+16:01:59.767 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the course data is saved to an Excel file
+16:01:59.770 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Verifying search results page
+16:01:59.792 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Search results page verified. URL: https://www.coursera.org/search?query=web%20development%20courses%20for%20beginners&language=English&productDifficultyLevel=Beginner
   Then the search results page should be displayed                                  # com.hackathonProject.stepdefinitions.CourseSearchSteps.theSearchResultsPageShouldBeDisplayed()
-17:40:32.612 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the search results page should be displayed
-17:40:32.613 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Asserting first course name is not empty
-17:40:32.615 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - First course name: Web Development for Beginners
+16:01:59.794 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the search results page should be displayed
+16:01:59.796 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Asserting first course name is not empty
+16:01:59.796 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - First course name: Web Development for Beginners
   And the first course name should not be empty                                     # com.hackathonProject.stepdefinitions.CourseSearchSteps.theFirstCourseNameShouldNotBeEmpty()
-17:40:32.615 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the first course name should not be empty
-17:40:32.616 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO FINISHED: Search web development courses for beginners in English and save to Excel | Status: PASSED ======
-17:40:32.616 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - Quitting edge browser on thread: TestNG-PoolService-1
-17:40:33.719 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - Browser closed. Scenario teardown complete.
-17:40:33.727 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener - ■ SCENARIO PASSED: [Search web development courses for beginners in English and save to Excel] in 96.78s
+16:01:59.797 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the first course name should not be empty
+16:01:59.798 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO FINISHED: Search web development courses for beginners in English and save to Excel | Status: PASSED ======
+16:01:59.798 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - Quitting edge browser on thread: TestNG-PoolService-1
+16:02:00.996 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - Browser closed. Scenario teardown complete.
+16:02:01.002 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener - ■ SCENARIO PASSED: [Search web development courses for beginners in English and save to Excel] in 129.16s
 ]]></system-out>
   </testcase>
 </testsuite>
