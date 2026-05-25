@@ -28,7 +28,9 @@ public class BaseClass {
 
     public static String getCurrentBrowser() {
         String override = browserOverride.get();
-        if (override != null && !override.isEmpty()) return override;
+        if (override != null) return override;
+        String sysProp = System.getProperty("browser");
+        if (sysProp != null && !sysProp.isEmpty()) return sysProp;
         return ConfigReader.getProperty("browser");
     }
 
