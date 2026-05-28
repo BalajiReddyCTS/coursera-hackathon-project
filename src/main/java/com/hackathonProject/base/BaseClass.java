@@ -19,20 +19,14 @@ public class BaseClass {
 
     private static final Logger logger = LogManager.getLogger(BaseClass.class);
 
+    //ThreadLocal<T> is a Java utility that gives each thread its own private copy of a variable.
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
-    private static ThreadLocal<String> browserOverride = new ThreadLocal<>();
-
-    public static void setBrowserOverride(String browser) {
-        browserOverride.set(browser);
-        logger.info("Browser override set to: " + browser);
-    }
 
     public static String getCurrentBrowser() {
-        String override = browserOverride.get();
-        if (override != null) return override;
-        String sysProp = System.getProperty("browser");
+        String sysProp = System.getProperty("browser"); // -Dbrowser=chrome from Jenkins
         if (sysProp != null && !sysProp.isEmpty()) return sysProp;
-        return ConfigReader.getProperty("browser");
+
+        return ConfigReader.getProperty("browser");     // config.properties default
     }
 
     /**
@@ -56,14 +50,17 @@ public class BaseClass {
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.addArguments("--start-maximized");
             chromeOptions.addArguments("--disable-notifications");
-            chromeOptions.addArguments("--no-sandbox");
-            chromeOptions.addArguments("--disable-dev-shm-usage");
+            chromeOptions.addArguments("--no-sandbox"); //Disables the browser’s security sandbox
+            chromeOptions.addArguments("--disable-dev-shm-usage"); //Prevents the browser from using /dev/shm (shared memory)
             if (headless) {
                 chromeOptions.addArguments("--headless=new");
                 chromeOptions.addArguments("--window-size=1920,1080");
                 chromeOptions.addArguments("--disable-gpu");
                 logger.info("Chrome running in HEADLESS mode");
             }
+
+            // It automatically downloads the correct chromedriver binary that matches the installed Chrome browser version
+            // and sets it up for Selenium to use
             WebDriverManager.chromedriver().setup();
             webDriver = new ChromeDriver(chromeOptions);
             logger.info("Chrome browser launched");
@@ -74,10 +71,14 @@ public class BaseClass {
             edgeOptions.addArguments("--disable-notifications");
             edgeOptions.addArguments("--no-sandbox");
             edgeOptions.addArguments("--disable-dev-shm-usage");
+
+            //unique profile per thread
             // Force unique user data dir per thread to prevent session sharing
             String uniqueProfile = System.getProperty("java.io.tmpdir")
                     + "edge_profile_" + Thread.currentThread().threadId() + "_" + System.currentTimeMillis();
+
             edgeOptions.addArguments("--user-data-dir=" + uniqueProfile);
+
             if (headless) {
                 edgeOptions.addArguments("--headless=new");
                 edgeOptions.addArguments("--window-size=1920,1080");
@@ -128,8 +129,7 @@ public class BaseClass {
             } catch (Exception e) {
                 logger.warn("Error quitting browser: " + e.getMessage());
             }
-            driver.remove();
-            browserOverride.remove();
+            driver.remove(); //clears ThreadLocal slot
         }
     }
 }

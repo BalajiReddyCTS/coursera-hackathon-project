@@ -9,7 +9,7 @@
 @LanguageLearning
 Feature: Language Learning - Extract Languages and Levels
 
-  @Smoke @LanguageLearning
+  @Smoke
   Scenario: Extract all languages and levels from Language Learning category
     Given the user navigates to the Language Learning category
     When the user opens the language filter dropdown

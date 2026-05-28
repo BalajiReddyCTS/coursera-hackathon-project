@@ -1,216 +1,432 @@
-2026-05-25 15:59:52.034 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener - ▶ SCENARIO STARTED: [Extract all languages and levels from Language Learning category] in [file:///C:/Users/2485865/Downloads/HackathonProject/CourseraAutomation/src/test/resources/features/LanguageLearning.feature]
-2026-05-25 15:59:52.069 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener - ▶ SCENARIO STARTED: [Verify email validation error on business contact form] in [file:///C:/Users/2485865/Downloads/HackathonProject/CourseraAutomation/src/test/resources/features/EnterpriseForm.feature]
-2026-05-25 15:59:52.078 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener - ▶ SCENARIO STARTED: [Search web development courses for beginners in English and save to Excel] in [file:///C:/Users/2485865/Downloads/HackathonProject/CourseraAutomation/src/test/resources/features/CourseSearch.feature]
-2026-05-25 15:59:52.085 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO STARTED: Extract all languages and levels from Language Learning category ======
-2026-05-25 15:59:52.085 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO STARTED: Search web development courses for beginners in English and save to Excel ======
-2026-05-25 15:59:52.085 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO STARTED: Verify email validation error on business contact form ======
-2026-05-25 15:59:52.086 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - Tags: [@LanguageLearning, @Smoke, @LanguageLearning]
-2026-05-25 15:59:52.086 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - Tags: [@CourseSearch, @Smoke, @CourseSearch]
-2026-05-25 15:59:52.086 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - Tags: [@EnterpriseForm, @Smoke, @EnterpriseForm]
-2026-05-25 15:59:52.093 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.ConfigReader - config.properties loaded successfully
-2026-05-25 15:59:52.094 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - Launching browser: edge on thread: TestNG-PoolService-3
-2026-05-25 15:59:52.094 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - Launching browser: edge on thread: TestNG-PoolService-1
-2026-05-25 15:59:52.094 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - Launching browser: edge on thread: TestNG-PoolService-2
-2026-05-25 15:59:59.685 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - Edge browser launched (via Selenium Manager) with unique profile
-2026-05-25 15:59:59.696 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - Edge browser launched (via Selenium Manager) with unique profile
-2026-05-25 15:59:59.711 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - WebDriver [edge] created and stored in ThreadLocal. Session: 122a9b1f72776ad0244a7e497c0a5714
-2026-05-25 15:59:59.730 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.ExtentReportManager - ExtentReports initialised at: reports/extent/ExtentReport_2026-05-25_15-59-59.html
-2026-05-25 15:59:59.740 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - Browser launched successfully
-2026-05-25 15:59:59.754 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - WebDriver [edge] created and stored in ThreadLocal. Session: 739b1d335d0f8bc176011bcf6fef3e3d
-2026-05-25 15:59:59.757 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - Browser launched successfully
-2026-05-25 15:59:59.894 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Navigating to Coursera For Business page
-2026-05-25 15:59:59.906 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Opening Coursera home page
-2026-05-25 15:59:59.928 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.HomePage - Navigating to: https://www.coursera.org
-2026-05-25 16:00:01.065 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - Edge browser launched (via Selenium Manager) with unique profile
-2026-05-25 16:00:01.097 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - WebDriver [edge] created and stored in ThreadLocal. Session: acc217e1ca5aceef6e80a6a0074bb941
-2026-05-25 16:00:01.098 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - Browser launched successfully
-2026-05-25 16:00:01.121 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Navigating to Language Learning category
-2026-05-25 16:00:19.884 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user navigates to the Language Learning category
-2026-05-25 16:00:19.887 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Opening Language filter dropdown
-2026-05-25 16:00:19.888 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Extracting all language filter options
-2026-05-25 16:00:20.688 [TestNG-PoolService-3] INFO  com.hackathonProject.utils.JavaScriptUtil - JavaScript click performed on element
-2026-05-25 16:00:22.958 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user navigates to the Coursera For Business page
-2026-05-25 16:00:22.963 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Clicking Contact Sales / scrolling to form
-2026-05-25 16:00:22.965 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Scrolling to form section
-2026-05-25 16:00:22.990 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.JavaScriptUtil - Scrolled by 2000 pixels
-2026-05-25 16:00:23.071 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Marketo form found
-2026-05-25 16:00:23.072 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user clicks on Contact Sales
-2026-05-25 16:00:23.092 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Filling contact form with DataTable values
-2026-05-25 16:00:23.096 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - Form data: {firstName=Srijita, lastName=Baksi, email=srijitacogniznat.com}
-2026-05-25 16:00:23.097 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Filling form with invalid email: srijitacogniznat.com
-2026-05-25 16:00:23.691 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Home page opened successfully
-2026-05-25 16:00:23.693 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user is on the Coursera home page
-2026-05-25 16:00:23.696 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Searching for: web development courses for beginners
-2026-05-25 16:00:23.697 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.HomePage - Searching for: web development courses for beginners
-2026-05-25 16:00:23.853 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Entered First Name: Srijita
-2026-05-25 16:00:24.254 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Entered Last Name: Baksi
-2026-05-25 16:00:30.761 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Clicked 'Language' section
-2026-05-25 16:00:42.610 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Total languages: 62
-2026-05-25 16:00:42.611 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user opens the language filter dropdown
-2026-05-25 16:00:42.613 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Opening Level filter dropdown
-2026-05-25 16:00:42.614 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Extracting all level filter options
-2026-05-25 16:00:44.830 [TestNG-PoolService-2] WARN  com.hackathonProject.utils.WaitUtil - Element not visible within timeout
-2026-05-25 16:00:44.830 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Entered invalid email: srijitacogniznat.com
-2026-05-25 16:00:44.830 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Form filled successfully
-2026-05-25 16:00:45.079 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.ScreenshotUtil - Screenshot saved: C:\Users\2485865\Downloads\HackathonProject\CourseraAutomation\screenshots\FormFilledWithInvalidEmail_2026-05-25_16-00-45.png
-2026-05-25 16:00:45.094 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user fills the contact form with the following details:
-2026-05-25 16:00:45.098 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Checking for email validation error message
-2026-05-25 16:00:45.260 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Submit clicked
-2026-05-25 16:00:45.260 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Capturing email error message
-2026-05-25 16:00:45.384 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Error: Must be valid email.
+2026-05-28 09:05:25.265 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener - ▶ SCENARIO STARTED: [Extract all languages and levels from Language Learning category] in [file:///C:/Users/2485865/Downloads/HackathonProject/CourseraAutomation/src/test/resources/features/LanguageLearning.feature]
+2026-05-28 09:05:25.291 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener - ▶ SCENARIO STARTED: [Verify email validation error on business contact form] in [file:///C:/Users/2485865/Downloads/HackathonProject/CourseraAutomation/src/test/resources/features/EnterpriseForm.feature]
+2026-05-28 09:05:25.298 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener - ▶ SCENARIO STARTED: [Search web development courses for beginners in English and save to Excel] in [file:///C:/Users/2485865/Downloads/HackathonProject/CourseraAutomation/src/test/resources/features/CourseSearch.feature]
+2026-05-28 09:05:25.310 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO STARTED: Search web development courses for beginners in English and save to Excel ======
+2026-05-28 09:05:25.310 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO STARTED: Verify email validation error on business contact form ======
+2026-05-28 09:05:25.310 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO STARTED: Extract all languages and levels from Language Learning category ======
+2026-05-28 09:05:25.311 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - Tags: [@CourseSearch, @Smoke]
+2026-05-28 09:05:25.311 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - Tags: [@LanguageLearning, @Smoke]
+2026-05-28 09:05:25.311 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - Tags: [@EnterpriseForm, @Smoke, @Regression]
+2026-05-28 09:05:25.317 [TestNG-PoolService-3] INFO  com.hackathonProject.utils.ConfigReader - config.properties loaded successfully
+2026-05-28 09:05:25.318 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - Launching browser: edge | headless=false | thread=TestNG-PoolService-1
+2026-05-28 09:05:25.318 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - Launching browser: edge | headless=false | thread=TestNG-PoolService-3
+2026-05-28 09:05:25.318 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - Launching browser: edge | headless=false | thread=TestNG-PoolService-2
+2026-05-28 09:05:32.507 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - Edge browser launched (via Selenium Manager) with unique profile
+2026-05-28 09:05:32.507 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - Edge browser launched (via Selenium Manager) with unique profile
+2026-05-28 09:05:32.549 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - WebDriver [edge] created and stored in ThreadLocal. Session: d711afe7834f8ea5b20207fbf87efbed
+2026-05-28 09:05:32.553 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - Edge browser launched (via Selenium Manager) with unique profile
+2026-05-28 09:05:32.562 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.ExtentReportManager - ExtentReports initialised at: reports/extent/ExtentReport_2026-05-28_09-05-32.html
+2026-05-28 09:05:32.565 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - WebDriver [edge] created and stored in ThreadLocal. Session: 763950982c5c2223d130b21990ec44b2
+2026-05-28 09:05:32.571 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - Browser launched successfully
+2026-05-28 09:05:32.570 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - Browser launched successfully
+2026-05-28 09:05:32.630 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Navigating to Language Learning category
+2026-05-28 09:05:32.632 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - WebDriver [edge] created and stored in ThreadLocal. Session: ef0d5b5a1d92843c783950196097bcda
+2026-05-28 09:05:32.632 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - Browser launched successfully
+2026-05-28 09:05:32.698 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Navigating to Coursera For Business page
+2026-05-28 09:05:32.732 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Opening Coursera home page
+2026-05-28 09:05:32.745 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.HomePage - Navigating to: https://www.coursera.org
+2026-05-28 09:05:49.268 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Home page opened successfully
+2026-05-28 09:05:49.273 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user is on the Coursera home page
+2026-05-28 09:05:49.273 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Searching for: web development courses for beginners
+2026-05-28 09:05:49.282 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.HomePage - Searching for: web development courses for beginners
+2026-05-28 09:05:49.378 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user navigates to the Coursera For Business page
+2026-05-28 09:05:49.387 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Clicking Contact Sales / scrolling to form
+2026-05-28 09:05:49.387 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Scrolling to form section
+2026-05-28 09:05:49.401 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.JavaScriptUtil - Scrolled by 2000 pixels
+2026-05-28 09:05:49.482 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Marketo form found
+2026-05-28 09:05:49.484 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user clicks on Contact Sales
+2026-05-28 09:05:49.506 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Filling contact form with DataTable values
+2026-05-28 09:05:49.509 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - Form data: {firstName=Balaji, lastName=Reddy, email=balajicogniznat.com}
+2026-05-28 09:05:49.510 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Filling form with invalid email: balajicogniznat.com
+2026-05-28 09:05:49.822 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Entered First Name: Balaji
+2026-05-28 09:05:50.229 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Entered Last Name: Reddy
+2026-05-28 09:05:51.436 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user navigates to the Language Learning category
+2026-05-28 09:05:51.437 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Opening Language filter dropdown
+2026-05-28 09:05:51.437 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Extracting all language filter options
+2026-05-28 09:05:52.257 [TestNG-PoolService-3] INFO  com.hackathonProject.utils.JavaScriptUtil - JavaScript click performed on element
+2026-05-28 09:06:02.333 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Clicked 'Language' section
+2026-05-28 09:06:10.915 [TestNG-PoolService-2] WARN  com.hackathonProject.utils.WaitUtil - Element not visible within timeout
+2026-05-28 09:06:10.915 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Entered invalid email: balajicogniznat.com
+2026-05-28 09:06:10.915 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Form filled successfully
+2026-05-28 09:06:11.147 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.ScreenshotUtil - Screenshot saved: C:\Users\2485865\Downloads\HackathonProject\CourseraAutomation\screenshots\FormFilledWithInvalidEmail_2026-05-28_09-06-11.png
+2026-05-28 09:06:11.155 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user fills the contact form with the following details:
+2026-05-28 09:06:11.155 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Checking for email validation error message
+2026-05-28 09:06:11.277 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Submit clicked
+2026-05-28 09:06:11.277 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Capturing email error message
+2026-05-28 09:06:11.353 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Error: Must be valid email.
 example@yourdomain.com
-2026-05-25 16:00:45.384 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - Captured error message: Must be valid email.
+2026-05-28 09:06:11.354 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - Captured error message: Must be valid email.
 example@yourdomain.com
-2026-05-25 16:00:45.615 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.ScreenshotUtil - Screenshot saved: C:\Users\2485865\Downloads\HackathonProject\CourseraAutomation\screenshots\EmailValidationError_2026-05-25_16-00-45.png
-2026-05-25 16:00:45.623 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: an email validation error message should be displayed
-2026-05-25 16:00:45.627 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Asserting error message contains: valid email
-2026-05-25 16:00:45.629 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - Assertion PASSED: Must be valid email.
+2026-05-28 09:06:11.551 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.ScreenshotUtil - Screenshot saved: C:\Users\2485865\Downloads\HackathonProject\CourseraAutomation\screenshots\EmailValidationError_2026-05-28_09-06-11.png
+2026-05-28 09:06:11.557 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: an email validation error message should be displayed
+2026-05-28 09:06:11.560 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Asserting error message contains: valid email
+2026-05-28 09:06:11.560 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - Assertion PASSED: Must be valid email.
 example@yourdomain.com
-2026-05-25 16:00:45.632 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the error message should contain "valid email"
-2026-05-25 16:00:45.638 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO FINISHED: Verify email validation error on business contact form | Status: PASSED ======
-2026-05-25 16:00:45.641 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - Quitting edge browser on thread: TestNG-PoolService-2
-2026-05-25 16:00:47.460 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - Browser closed. Scenario teardown complete.
-2026-05-25 16:00:47.579 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener - ■ SCENARIO PASSED: [Verify email validation error on business contact form] in 55.63s
-2026-05-25 16:00:57.909 [TestNG-PoolService-3] INFO  com.hackathonProject.utils.JavaScriptUtil - JavaScript click performed on element
-2026-05-25 16:01:00.750 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.HomePage - Search submitted. URL: https://www.coursera.org/search?query=web%20development%20courses%20for%20beginners
-2026-05-25 16:01:00.751 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user searches for "web development courses for beginners"
-2026-05-25 16:01:00.753 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Applying language filter: English
-2026-05-25 16:01:00.754 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Applying language filter: English
-2026-05-25 16:01:07.965 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Clicked 'Level' section
-2026-05-25 16:01:08.096 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Beginner → 5035
-2026-05-25 16:01:08.096 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Intermediate → 4338
-2026-05-25 16:01:08.098 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Advanced → 458
-2026-05-25 16:01:08.098 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Mixed → 1374
-2026-05-25 16:01:08.098 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Total levels: 4
-2026-05-25 16:01:08.099 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user opens the level filter dropdown
-2026-05-25 16:01:08.101 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Verifying languages were captured
-2026-05-25 16:01:08.103 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - 
+2026-05-28 09:06:11.561 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the error message should contain "valid email"
+2026-05-28 09:06:11.564 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO FINISHED: Verify email validation error on business contact form | Status: PASSED ======
+2026-05-28 09:06:11.564 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - Quitting edge browser on thread: TestNG-PoolService-2
+2026-05-28 09:06:13.140 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - Browser closed. Scenario teardown complete.
+2026-05-28 09:06:13.267 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener - ■ SCENARIO PASSED: [Verify email validation error on business contact form] in 48.04s
+2026-05-28 09:06:14.432 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Total languages: 62
+2026-05-28 09:06:14.433 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user opens the language filter dropdown
+2026-05-28 09:06:14.435 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Opening Level filter dropdown
+2026-05-28 09:06:14.435 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Extracting all level filter options
+2026-05-28 09:06:14.597 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.HomePage - Search submitted. URL: https://www.coursera.org/search?query=web%20development%20courses%20for%20beginners
+2026-05-28 09:06:14.598 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user searches for "web development courses for beginners"
+2026-05-28 09:06:14.600 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Applying language filter: English
+2026-05-28 09:06:14.601 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Applying language filter: English
+2026-05-28 09:06:29.869 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user applies the language filter "English"
+2026-05-28 09:06:29.870 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Applying level filter: Beginner
+2026-05-28 09:06:29.871 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Applying level filter: Beginner
+2026-05-28 09:06:30.883 [TestNG-PoolService-3] INFO  com.hackathonProject.utils.JavaScriptUtil - JavaScript click performed on element
+2026-05-28 09:06:40.917 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Clicked 'Level' section
+2026-05-28 09:06:41.030 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Beginner → 5076
+2026-05-28 09:06:41.030 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Intermediate → 4357
+2026-05-28 09:06:41.032 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Advanced → 459
+2026-05-28 09:06:41.032 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Mixed → 1411
+2026-05-28 09:06:41.032 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Total levels: 4
+2026-05-28 09:06:41.032 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user opens the level filter dropdown
+2026-05-28 09:06:41.034 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Verifying languages were captured
+2026-05-28 09:06:41.037 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - 
 ===== LANGUAGES EXTRACTED =====
-  English                   → 10551 courses
-  Kazakh                    → 4417 courses
-  Spanish                   → 4356 courses
-  French                    → 4282 courses
-  Arabic                    → 4184 courses
-  German                    → 4165 courses
-  Portuguese                → 3019 courses
-  Indonesian                → 2970 courses
-  Chinese                   → 2811 courses
-  Hungarian                 → 2739 courses
-  Russian                   → 2674 courses
-  Japanese                  → 2668 courses
-  Korean                    → 2652 courses
-  Hindi                     → 2578 courses
-  Italian                   → 2566 courses
-  Turkish                   → 2520 courses
-  Thai                      → 2487 courses
-  Ukrainian                 → 2466 courses
-  Dutch                     → 2455 courses
-  Greek                     → 2454 courses
-  Polish                    → 2451 courses
-  Swedish                   → 2434 courses
-  Uzbek                     → 1949 courses
-  Vietnamese                → 1820 courses
-  Pushto                    → 1818 courses
-  Azerbaijani               → 1607 courses
-  Urdu                      → 1354 courses
-  Bengali                   → 1346 courses
-  Oriya                     → 234 courses
-  Malay                     → 202 courses
-  Haitian (Haitian Creole)  → 90 courses
+  English                   → 10642 courses
+  Kazakh                    → 4424 courses
+  Spanish                   → 4365 courses
+  French                    → 4284 courses
+  Arabic                    → 4188 courses
+  German                    → 4172 courses
+  Portuguese                → 3027 courses
+  Indonesian                → 2977 courses
+  Chinese                   → 2823 courses
+  Hungarian                 → 2743 courses
+  Russian                   → 2679 courses
+  Japanese                  → 2671 courses
+  Korean                    → 2656 courses
+  Hindi                     → 2586 courses
+  Italian                   → 2571 courses
+  Turkish                   → 2526 courses
+  Thai                      → 2491 courses
+  Ukrainian                 → 2472 courses
+  Dutch                     → 2460 courses
+  Greek                     → 2459 courses
+  Polish                    → 2457 courses
+  Swedish                   → 2439 courses
+  Uzbek                     → 1954 courses
+  Pushto                    → 1827 courses
+  Vietnamese                → 1825 courses
+  Azerbaijani               → 1611 courses
+  Urdu                      → 1357 courses
+  Bengali                   → 1349 courses
+  Oriya                     → 235 courses
+  Malay                     → 205 courses
+  Haitian (Haitian Creole)  → 91 courses
   Persian                   → 62 courses
   Khmer                     → 37 courses
-  Romanian                  → 30 courses
+  Romanian                  → 32 courses
   Hebrew                    → 29 courses
   Serbian                   → 23 courses
   Afrikaans                 → 19 courses
+  Javanese                  → 17 courses
   Finnish                   → 16 courses
-  Javanese                  → 16 courses
-  Tamil                     → 15 courses
+  Tamil                     → 16 courses
   Catalan                   → 13 courses
-  Slovak                    → 10 courses
-  Czech                     → 9 courses
+  Slovak                    → 11 courses
+  Czech                     → 10 courses
   Estonian                  → 9 courses
   Mongolian                 → 8 courses
   Albanian                  → 5 courses
+  Croatian                  → 5 courses
   Georgian                  → 5 courses
   Telugu                    → 5 courses
-  Croatian                  → 4 courses
   Bulgarian                 → 3 courses
+  Latvian                   → 3 courses
   Lithuanian                → 3 courses
   Burmese                   → 2 courses
-  Latvian                   → 2 courses
+  Danish                    → 2 courses
+  Malayalam                 → 2 courses
   Marathi                   → 2 courses
   Nepali                    → 2 courses
-  Danish                    → 1 courses
   Kinyarwanda               → 1 courses
   Macedonian                → 1 courses
-  Malayalam                 → 1 courses
   Slovenian                 → 1 courses
   Swahili                   → 1 courses
   Tagalog                   → 1 courses
 ================================
-2026-05-25 16:01:08.106 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: all available languages with their counts should be captured and displayed
-2026-05-25 16:01:08.108 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Verifying levels were captured
-2026-05-25 16:01:08.109 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - 
+2026-05-28 09:06:41.039 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: all available languages with their counts should be captured and displayed
+2026-05-28 09:06:41.040 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Verifying levels were captured
+2026-05-28 09:06:41.041 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - 
 ===== LEVELS EXTRACTED =====
-  Beginner                  → 5035 courses
-  Intermediate              → 4338 courses
-  Advanced                  → 458 courses
-  Mixed                     → 1374 courses
+  Beginner                  → 5076 courses
+  Intermediate              → 4357 courses
+  Advanced                  → 459 courses
+  Mixed                     → 1411 courses
 ============================
-2026-05-25 16:01:08.110 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: all available levels with their counts should be captured and displayed
-2026-05-25 16:01:08.119 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Asserting language count >= 5
-2026-05-25 16:01:08.120 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - Language count: 62 >= 5
-2026-05-25 16:01:08.122 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the language list should contain at least 5 languages
-2026-05-25 16:01:08.124 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Asserting level count >= 2
-2026-05-25 16:01:08.124 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - Level count: 4 >= 2
-2026-05-25 16:01:08.125 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the level list should contain at least 2 levels
-2026-05-25 16:01:08.126 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO FINISHED: Extract all languages and levels from Language Learning category | Status: PASSED ======
-2026-05-25 16:01:08.127 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - Quitting edge browser on thread: TestNG-PoolService-3
-2026-05-25 16:01:09.630 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - Browser closed. Scenario teardown complete.
-2026-05-25 16:01:09.638 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener - ■ SCENARIO PASSED: [Extract all languages and levels from Language Learning category] in 77.80s
-2026-05-25 16:01:24.035 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user applies the language filter "English"
-2026-05-25 16:01:24.037 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Applying level filter: Beginner
-2026-05-25 16:01:24.037 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Applying level filter: Beginner
-2026-05-25 16:01:47.545 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user applies the level filter "Beginner"
-2026-05-25 16:01:47.546 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Extracting 5 courses
-2026-05-25 16:01:47.546 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracting top 5 courses
-2026-05-25 16:01:57.581 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.JavaScriptUtil - Scrolled by 800 pixels
-2026-05-25 16:01:57.684 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.JavaScriptUtil - Scrolled to top of page
-2026-05-25 16:01:57.757 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Found 11 course cards
-2026-05-25 16:01:57.825 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 1. Web Development for Beginners | Rating: 4.7 | Hours: 3 - 6 Months
-2026-05-25 16:01:57.868 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 2. Introduction to Web Development with HTML, CSS, JavaScript | Rating: 4.6 | Hours: 1 - 3 Months
-2026-05-25 16:01:57.889 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 3. Front-End Web Development for Beginners | Rating: 4.6 | Hours: 1 - 3 Months
-2026-05-25 16:01:57.910 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 4. Introduction to Web Development and HTML Basics | Rating: N/A | Hours: 1 - 3 Months
-2026-05-25 16:01:57.932 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 5. Introduction to HTML, CSS, & JavaScript | Rating: 4.4 | Hours: 1 - 4 Weeks
-2026-05-25 16:01:57.933 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Total extracted: 5
-2026-05-25 16:01:57.933 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 1. Web Development for Beginners | Rating: 4.7 | Hours: 3 - 6 Months
-2026-05-25 16:01:57.934 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 2. Introduction to Web Development with HTML, CSS, JavaScript | Rating: 4.6 | Hours: 1 - 3 Months
-2026-05-25 16:01:57.934 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 3. Front-End Web Development for Beginners | Rating: 4.6 | Hours: 1 - 3 Months
-2026-05-25 16:01:57.934 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 4. Introduction to Web Development and HTML Basics | Rating: N/A | Hours: 1 - 3 Months
-2026-05-25 16:01:57.934 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 5. Introduction to HTML, CSS, & JavaScript | Rating: 4.4 | Hours: 1 - 4 Weeks
-2026-05-25 16:01:57.934 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Extraction complete. Got 5 courses.
-2026-05-25 16:01:57.937 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user extracts the first 5 courses with name, hours and rating
-2026-05-25 16:01:57.938 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Saving course data to Excel
-2026-05-25 16:01:57.939 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Saving 5 courses to Excel: src/test/resources/testdata/CourseData.xlsx
-2026-05-25 16:01:57.942 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.ExcelDataWriter - Writing 5 courses to Excel: src/test/resources/testdata/CourseData.xlsx
-2026-05-25 16:01:59.754 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.ExcelDataWriter - Excel file saved: src/test/resources/testdata/CourseData.xlsx
-2026-05-25 16:01:59.766 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Excel saved successfully: src/test/resources/testdata/CourseData.xlsx
-2026-05-25 16:01:59.767 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the course data is saved to an Excel file
-2026-05-25 16:01:59.770 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Verifying search results page
-2026-05-25 16:01:59.792 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Search results page verified. URL: https://www.coursera.org/search?query=web%20development%20courses%20for%20beginners&language=English&productDifficultyLevel=Beginner
-2026-05-25 16:01:59.794 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the search results page should be displayed
-2026-05-25 16:01:59.796 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Asserting first course name is not empty
-2026-05-25 16:01:59.796 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - First course name: Web Development for Beginners
-2026-05-25 16:01:59.797 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the first course name should not be empty
-2026-05-25 16:01:59.798 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO FINISHED: Search web development courses for beginners in English and save to Excel | Status: PASSED ======
-2026-05-25 16:01:59.798 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - Quitting edge browser on thread: TestNG-PoolService-1
-2026-05-25 16:02:00.996 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - Browser closed. Scenario teardown complete.
-2026-05-25 16:02:01.002 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener - ■ SCENARIO PASSED: [Search web development courses for beginners in English and save to Excel] in 129.16s
-2026-05-25 16:02:01.479 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.listeners.CucumberListener - ========================================
-2026-05-25 16:02:01.479 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.listeners.CucumberListener -   CUCUMBER TEST RUN FINISHED
-2026-05-25 16:02:01.479 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.listeners.CucumberListener - ========================================
-2026-05-25 16:02:01.578 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.utils.ExtentReportManager - Extent Reports flushed to disk
-2026-05-25 16:02:01.578 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.listeners.CucumberListener - Extent Reports flushed successfully
-2026-05-25 16:02:01.583 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.listeners.CucumberListener - Report archived: reports/cucumber/cucumber-report_2026-05-25_15-59-59.html
-2026-05-25 16:02:01.586 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.listeners.CucumberListener - Report archived: reports/cucumber/cucumber-report_2026-05-25_15-59-59.json
+2026-05-28 09:06:41.042 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: all available levels with their counts should be captured and displayed
+2026-05-28 09:06:41.052 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Asserting language count >= 5
+2026-05-28 09:06:41.054 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - Language count: 62 >= 5
+2026-05-28 09:06:41.055 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the language list should contain at least 5 languages
+2026-05-28 09:06:41.056 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Asserting level count >= 2
+2026-05-28 09:06:41.057 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - Level count: 4 >= 2
+2026-05-28 09:06:41.057 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the level list should contain at least 2 levels
+2026-05-28 09:06:41.058 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO FINISHED: Extract all languages and levels from Language Learning category | Status: PASSED ======
+2026-05-28 09:06:41.058 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - Quitting edge browser on thread: TestNG-PoolService-3
+2026-05-28 09:06:42.369 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - Browser closed. Scenario teardown complete.
+2026-05-28 09:06:42.382 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener - ■ SCENARIO PASSED: [Extract all languages and levels from Language Learning category] in 77.27s
+2026-05-28 09:06:42.542 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user applies the level filter "Beginner"
+2026-05-28 09:06:42.542 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Extracting 5 courses
+2026-05-28 09:06:42.542 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracting top 5 courses
+2026-05-28 09:06:52.578 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.JavaScriptUtil - Scrolled by 800 pixels
+2026-05-28 09:06:52.584 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.JavaScriptUtil - Scrolled to top of page
+2026-05-28 09:06:52.584 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Found 11 course cards
+2026-05-28 09:06:52.623 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 1. Web Development for Beginners | Rating: 4.7 | Hours: 3 - 6 Months
+2026-05-28 09:06:52.634 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 2. Introduction to Web Development with HTML, CSS, JavaScript | Rating: 4.6 | Hours: 1 - 3 Months
+2026-05-28 09:06:52.654 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 3. Front-End Web Development for Beginners | Rating: 4.6 | Hours: 1 - 3 Months
+2026-05-28 09:06:52.679 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 4. Introduction to Web Development and HTML Basics | Rating: N/A | Hours: 1 - 3 Months
+2026-05-28 09:06:52.700 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 5. Introduction to HTML, CSS, & JavaScript | Rating: 4.4 | Hours: 1 - 4 Weeks
+2026-05-28 09:06:52.701 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Total extracted: 5
+2026-05-28 09:06:52.702 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 1. Web Development for Beginners | Rating: 4.7 | Hours: 3 - 6 Months
+2026-05-28 09:06:52.702 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 2. Introduction to Web Development with HTML, CSS, JavaScript | Rating: 4.6 | Hours: 1 - 3 Months
+2026-05-28 09:06:52.703 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 3. Front-End Web Development for Beginners | Rating: 4.6 | Hours: 1 - 3 Months
+2026-05-28 09:06:52.703 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 4. Introduction to Web Development and HTML Basics | Rating: N/A | Hours: 1 - 3 Months
+2026-05-28 09:06:52.703 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 5. Introduction to HTML, CSS, & JavaScript | Rating: 4.4 | Hours: 1 - 4 Weeks
+2026-05-28 09:06:52.703 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Extraction complete. Got 5 courses.
+2026-05-28 09:06:52.704 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user extracts the first 5 courses with name, hours and rating
+2026-05-28 09:06:52.705 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Saving course data to Excel
+2026-05-28 09:06:52.705 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Saving 5 courses to Excel: src/test/resources/testdata/CourseData.xlsx
+2026-05-28 09:06:52.710 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.ExcelDataWriter - Writing 5 courses to Excel: src/test/resources/testdata/CourseData.xlsx
+2026-05-28 09:06:54.070 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.ExcelDataWriter - Excel file saved: src/test/resources/testdata/CourseData.xlsx
+2026-05-28 09:06:54.087 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Excel saved successfully: src/test/resources/testdata/CourseData.xlsx
+2026-05-28 09:06:54.087 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the course data is saved to an Excel file
+2026-05-28 09:06:54.089 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Verifying search results page
+2026-05-28 09:06:54.098 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Search results page verified. URL: https://www.coursera.org/search?query=web%20development%20courses%20for%20beginners&language=English&productDifficultyLevel=Beginner
+2026-05-28 09:06:54.098 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the search results page should be displayed
+2026-05-28 09:06:54.101 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Asserting first course name is not empty
+2026-05-28 09:06:54.101 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - First course name: Web Development for Beginners
+2026-05-28 09:06:54.101 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the first course name should not be empty
+2026-05-28 09:06:54.103 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO FINISHED: Search web development courses for beginners in English and save to Excel | Status: PASSED ======
+2026-05-28 09:06:54.103 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - Quitting edge browser on thread: TestNG-PoolService-1
+2026-05-28 09:06:55.180 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - Browser closed. Scenario teardown complete.
+2026-05-28 09:06:55.185 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener - ■ SCENARIO PASSED: [Search web development courses for beginners in English and save to Excel] in 90.08s
+2026-05-28 09:06:55.553 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.listeners.CucumberListener - ========================================
+2026-05-28 09:06:55.554 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.listeners.CucumberListener -   CUCUMBER TEST RUN FINISHED
+2026-05-28 09:06:55.554 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.listeners.CucumberListener - ========================================
+2026-05-28 09:06:55.636 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.utils.ExtentReportManager - Extent Reports flushed to disk
+2026-05-28 09:06:55.636 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.listeners.CucumberListener - Extent Reports flushed successfully
+2026-05-28 09:06:55.639 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.listeners.CucumberListener - Report archived: reports/cucumber/cucumber-report_2026-05-28_09-05-32.html
+2026-05-28 09:06:55.643 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.listeners.CucumberListener - Report archived: reports/cucumber/cucumber-report_2026-05-28_09-05-32.json
+2026-05-28 12:10:54.564 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener - ▶ SCENARIO STARTED: [Extract all languages and levels from Language Learning category] in [file:///C:/Users/2485865/Downloads/HackathonProject/CourseraAutomation/src/test/resources/features/LanguageLearning.feature]
+2026-05-28 12:10:54.575 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener - ▶ SCENARIO STARTED: [Verify email validation error on business contact form] in [file:///C:/Users/2485865/Downloads/HackathonProject/CourseraAutomation/src/test/resources/features/EnterpriseForm.feature]
+2026-05-28 12:10:54.580 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener - ▶ SCENARIO STARTED: [Search web development courses for beginners in English and save to Excel] in [file:///C:/Users/2485865/Downloads/HackathonProject/CourseraAutomation/src/test/resources/features/CourseSearch.feature]
+2026-05-28 12:10:54.583 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO STARTED: Verify email validation error on business contact form ======
+2026-05-28 12:10:54.583 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO STARTED: Search web development courses for beginners in English and save to Excel ======
+2026-05-28 12:10:54.584 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO STARTED: Extract all languages and levels from Language Learning category ======
+2026-05-28 12:10:54.584 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - Tags: [@EnterpriseForm, @Smoke, @Regression]
+2026-05-28 12:10:54.584 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - Tags: [@CourseSearch, @Smoke]
+2026-05-28 12:10:54.584 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - Tags: [@LanguageLearning, @Smoke]
+2026-05-28 12:10:54.587 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - Launching browser: chrome | headless=false | thread=TestNG-PoolService-1
+2026-05-28 12:10:54.587 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - Launching browser: chrome | headless=false | thread=TestNG-PoolService-3
+2026-05-28 12:10:54.587 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - Launching browser: chrome | headless=false | thread=TestNG-PoolService-2
+2026-05-28 12:11:01.930 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - Chrome browser launched
+2026-05-28 12:11:01.930 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - Chrome browser launched
+2026-05-28 12:11:01.950 [TestNG-PoolService-3] INFO  com.hackathonProject.utils.ConfigReader - config.properties loaded successfully
+2026-05-28 12:11:01.973 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - WebDriver [chrome] created and stored in ThreadLocal. Session: 7b6956e5e7cee38eb6348ac5194d0399
+2026-05-28 12:11:01.984 [TestNG-PoolService-3] INFO  com.hackathonProject.utils.ExtentReportManager - ExtentReports initialised at: reports/extent/ExtentReport_2026-05-28_12-11-01.html
+2026-05-28 12:11:01.994 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - Browser launched successfully
+2026-05-28 12:11:02.003 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - WebDriver [chrome] created and stored in ThreadLocal. Session: b3b6119859b585836763ff9b0e752224
+2026-05-28 12:11:02.005 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - Browser launched successfully
+2026-05-28 12:11:02.032 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - Chrome browser launched
+2026-05-28 12:11:02.034 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Navigating to Language Learning category
+2026-05-28 12:11:02.106 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Navigating to Coursera For Business page
+2026-05-28 12:11:02.123 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - WebDriver [chrome] created and stored in ThreadLocal. Session: 3de0f354bdb7bb4b79df4cb8e1f42564
+2026-05-28 12:11:02.123 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - Browser launched successfully
+2026-05-28 12:11:02.203 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Opening Coursera home page
+2026-05-28 12:11:02.228 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.HomePage - Navigating to: https://www.coursera.org
+2026-05-28 12:11:25.719 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user navigates to the Language Learning category
+2026-05-28 12:11:25.723 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Opening Language filter dropdown
+2026-05-28 12:11:25.723 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Extracting all language filter options
+2026-05-28 12:11:27.001 [TestNG-PoolService-3] INFO  com.hackathonProject.utils.JavaScriptUtil - JavaScript click performed on element
+2026-05-28 12:11:27.990 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Home page opened successfully
+2026-05-28 12:11:27.992 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user is on the Coursera home page
+2026-05-28 12:11:27.995 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Searching for: web development courses for beginners
+2026-05-28 12:11:27.995 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.HomePage - Searching for: web development courses for beginners
+2026-05-28 12:11:37.079 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Clicked 'Language' section
+2026-05-28 12:11:37.899 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user navigates to the Coursera For Business page
+2026-05-28 12:11:37.899 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Clicking Contact Sales / scrolling to form
+2026-05-28 12:11:37.904 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Scrolling to form section
+2026-05-28 12:11:37.930 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.JavaScriptUtil - Scrolled by 2000 pixels
+2026-05-28 12:11:38.012 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Marketo form found
+2026-05-28 12:11:38.015 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user clicks on Contact Sales
+2026-05-28 12:11:38.036 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Filling contact form with DataTable values
+2026-05-28 12:11:38.039 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - Form data: {firstName=Balaji, lastName=Reddy, email=balajicogniznat.com}
+2026-05-28 12:11:38.041 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Filling form with invalid email: balajicogniznat.com
+2026-05-28 12:11:38.421 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Entered First Name: Balaji
+2026-05-28 12:11:39.143 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Entered Last Name: Reddy
+2026-05-28 12:11:48.978 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Total languages: 62
+2026-05-28 12:11:48.990 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user opens the language filter dropdown
+2026-05-28 12:11:48.992 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Opening Level filter dropdown
+2026-05-28 12:11:48.992 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Extracting all level filter options
+2026-05-28 12:11:59.865 [TestNG-PoolService-2] WARN  com.hackathonProject.utils.WaitUtil - Element not visible within timeout
+2026-05-28 12:11:59.865 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Entered invalid email: balajicogniznat.com
+2026-05-28 12:11:59.865 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Form filled successfully
+2026-05-28 12:12:00.073 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.ScreenshotUtil - Screenshot saved: C:\Users\2485865\Downloads\HackathonProject\CourseraAutomation\screenshots\FormFilledWithInvalidEmail_2026-05-28_12-12-00.png
+2026-05-28 12:12:00.084 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user fills the contact form with the following details:
+2026-05-28 12:12:00.088 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Checking for email validation error message
+2026-05-28 12:12:00.262 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Submit clicked
+2026-05-28 12:12:00.262 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Capturing email error message
+2026-05-28 12:12:00.522 [TestNG-PoolService-2] INFO  com.hackathonProject.pages.CampusPage - Error: Must be valid email.
+example@yourdomain.com
+2026-05-28 12:12:00.522 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - Captured error message: Must be valid email.
+example@yourdomain.com
+2026-05-28 12:12:00.764 [TestNG-PoolService-2] INFO  com.hackathonProject.utils.ScreenshotUtil - Screenshot saved: C:\Users\2485865\Downloads\HackathonProject\CourseraAutomation\screenshots\EmailValidationError_2026-05-28_12-12-00.png
+2026-05-28 12:12:00.776 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: an email validation error message should be displayed
+2026-05-28 12:12:00.780 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - STEP: Asserting error message contains: valid email
+2026-05-28 12:12:00.781 [TestNG-PoolService-2] INFO  com.hackathonProject.stepdefinitions.EnterpriseFormSteps - Assertion PASSED: Must be valid email.
+example@yourdomain.com
+2026-05-28 12:12:00.783 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the error message should contain "valid email"
+2026-05-28 12:12:00.798 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO FINISHED: Verify email validation error on business contact form | Status: PASSED ======
+2026-05-28 12:12:00.798 [TestNG-PoolService-2] INFO  com.hackathonProject.base.BaseClass - Quitting chrome browser on thread: TestNG-PoolService-2
+2026-05-28 12:12:03.535 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.HomePage - Search submitted. URL: https://www.coursera.org/search?query=web%20development%20courses%20for%20beginners
+2026-05-28 12:12:03.537 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user searches for "web development courses for beginners"
+2026-05-28 12:12:03.537 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Applying language filter: English
+2026-05-28 12:12:03.539 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Applying language filter: English
+2026-05-28 12:12:04.433 [TestNG-PoolService-3] INFO  com.hackathonProject.utils.JavaScriptUtil - JavaScript click performed on element
+2026-05-28 12:12:06.211 [TestNG-PoolService-2] INFO  com.hackathonProject.hooks.CucumberHooks - Browser closed. Scenario teardown complete.
+2026-05-28 12:12:06.371 [TestNG-PoolService-2] INFO  com.hackathonProject.listeners.CucumberListener - ■ SCENARIO PASSED: [Verify email validation error on business contact form] in 71.78s
+2026-05-28 12:12:14.504 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Clicked 'Level' section
+2026-05-28 12:12:14.631 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Beginner → 5076
+2026-05-28 12:12:14.631 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Intermediate → 4357
+2026-05-28 12:12:14.631 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Advanced → 459
+2026-05-28 12:12:14.631 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Level: Mixed → 1411
+2026-05-28 12:12:14.631 [TestNG-PoolService-3] INFO  com.hackathonProject.pages.LanguageCoursesPage - Total levels: 4
+2026-05-28 12:12:14.631 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user opens the level filter dropdown
+2026-05-28 12:12:14.631 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Verifying languages were captured
+2026-05-28 12:12:14.631 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - 
+===== LANGUAGES EXTRACTED =====
+  English                   -> 10642 courses
+  Kazakh                    -> 4424 courses
+  Spanish                   -> 4365 courses
+  French                    -> 4284 courses
+  Arabic                    -> 4188 courses
+  German                    -> 4172 courses
+  Portuguese                -> 3027 courses
+  Indonesian                -> 2977 courses
+  Chinese                   -> 2823 courses
+  Hungarian                 -> 2743 courses
+  Russian                   -> 2679 courses
+  Japanese                  -> 2671 courses
+  Korean                    -> 2656 courses
+  Hindi                     -> 2586 courses
+  Italian                   -> 2571 courses
+  Turkish                   -> 2526 courses
+  Thai                      -> 2491 courses
+  Ukrainian                 -> 2472 courses
+  Dutch                     -> 2460 courses
+  Greek                     -> 2459 courses
+  Polish                    -> 2457 courses
+  Swedish                   -> 2439 courses
+  Uzbek                     -> 1954 courses
+  Pushto                    -> 1827 courses
+  Vietnamese                -> 1825 courses
+  Azerbaijani               -> 1611 courses
+  Urdu                      -> 1357 courses
+  Bengali                   -> 1349 courses
+  Oriya                     -> 235 courses
+  Malay                     -> 205 courses
+  Haitian (Haitian Creole)  -> 91 courses
+  Persian                   -> 62 courses
+  Khmer                     -> 37 courses
+  Romanian                  -> 32 courses
+  Hebrew                    -> 29 courses
+  Serbian                   -> 23 courses
+  Afrikaans                 -> 19 courses
+  Javanese                  -> 17 courses
+  Finnish                   -> 16 courses
+  Tamil                     -> 16 courses
+  Catalan                   -> 13 courses
+  Slovak                    -> 11 courses
+  Czech                     -> 10 courses
+  Estonian                  -> 9 courses
+  Mongolian                 -> 8 courses
+  Albanian                  -> 5 courses
+  Croatian                  -> 5 courses
+  Georgian                  -> 5 courses
+  Telugu                    -> 5 courses
+  Bulgarian                 -> 3 courses
+  Latvian                   -> 3 courses
+  Lithuanian                -> 3 courses
+  Burmese                   -> 2 courses
+  Danish                    -> 2 courses
+  Malayalam                 -> 2 courses
+  Marathi                   -> 2 courses
+  Nepali                    -> 2 courses
+  Kinyarwanda               -> 1 courses
+  Macedonian                -> 1 courses
+  Slovenian                 -> 1 courses
+  Swahili                   -> 1 courses
+  Tagalog                   -> 1 courses
+================================
+2026-05-28 12:12:14.631 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: all available languages with their counts should be captured and displayed
+2026-05-28 12:12:14.639 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Verifying levels were captured
+2026-05-28 12:12:14.639 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - 
+===== LEVELS EXTRACTED =====
+  Beginner                  -> 5076 courses
+  Intermediate              -> 4357 courses
+  Advanced                  -> 459 courses
+  Mixed                     -> 1411 courses
+============================
+2026-05-28 12:12:14.639 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: all available levels with their counts should be captured and displayed
+2026-05-28 12:12:14.647 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Asserting language count >= 5
+2026-05-28 12:12:14.649 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - Language count: 62 >= 5
+2026-05-28 12:12:14.649 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the language list should contain at least 5 languages
+2026-05-28 12:12:14.651 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - STEP: Asserting level count >= 2
+2026-05-28 12:12:14.651 [TestNG-PoolService-3] INFO  com.hackathonProject.stepdefinitions.LanguageLearningSteps - Level count: 4 >= 2
+2026-05-28 12:12:14.651 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the level list should contain at least 2 levels
+2026-05-28 12:12:14.651 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO FINISHED: Extract all languages and levels from Language Learning category | Status: PASSED ======
+2026-05-28 12:12:14.651 [TestNG-PoolService-3] INFO  com.hackathonProject.base.BaseClass - Quitting chrome browser on thread: TestNG-PoolService-3
+2026-05-28 12:12:17.617 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user applies the language filter "English"
+2026-05-28 12:12:17.617 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Applying level filter: Beginner
+2026-05-28 12:12:17.617 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Applying level filter: Beginner
+2026-05-28 12:12:18.304 [TestNG-PoolService-3] INFO  com.hackathonProject.hooks.CucumberHooks - Browser closed. Scenario teardown complete.
+2026-05-28 12:12:18.318 [TestNG-PoolService-3] INFO  com.hackathonProject.listeners.CucumberListener - ■ SCENARIO PASSED: [Extract all languages and levels from Language Learning category] in 83.87s
+2026-05-28 12:12:30.564 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user applies the level filter "Beginner"
+2026-05-28 12:12:30.566 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Extracting 5 courses
+2026-05-28 12:12:30.566 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracting top 5 courses
+2026-05-28 12:12:40.621 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.JavaScriptUtil - Scrolled by 800 pixels
+2026-05-28 12:12:40.635 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.JavaScriptUtil - Scrolled to top of page
+2026-05-28 12:12:40.635 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Found 11 course cards
+2026-05-28 12:12:40.668 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 1. Web Development for Beginners | Rating: 4.7 | Hours: 3 - 6 Months
+2026-05-28 12:12:40.687 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 2. Introduction to Web Development with HTML, CSS, JavaScript | Rating: 4.6 | Hours: 1 - 3 Months
+2026-05-28 12:12:40.704 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 3. Front-End Web Development for Beginners | Rating: 4.6 | Hours: 1 - 3 Months
+2026-05-28 12:12:40.718 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 4. Introduction to Web Development and HTML Basics | Rating: N/A | Hours: 1 - 3 Months
+2026-05-28 12:12:40.735 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Extracted: 5. Introduction to HTML, CSS, & JavaScript | Rating: 4.4 | Hours: 1 - 4 Weeks
+2026-05-28 12:12:40.735 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Total extracted: 5
+2026-05-28 12:12:40.735 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 1. Web Development for Beginners | Rating: 4.7 | Hours: 3 - 6 Months
+2026-05-28 12:12:40.735 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 2. Introduction to Web Development with HTML, CSS, JavaScript | Rating: 4.6 | Hours: 1 - 3 Months
+2026-05-28 12:12:40.735 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 3. Front-End Web Development for Beginners | Rating: 4.6 | Hours: 1 - 3 Months
+2026-05-28 12:12:40.735 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 4. Introduction to Web Development and HTML Basics | Rating: N/A | Hours: 1 - 3 Months
+2026-05-28 12:12:40.735 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Course: 5. Introduction to HTML, CSS, & JavaScript | Rating: 4.4 | Hours: 1 - 4 Weeks
+2026-05-28 12:12:40.735 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Extraction complete. Got 5 courses.
+2026-05-28 12:12:40.735 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the user extracts the first 5 courses with name, hours and rating
+2026-05-28 12:12:40.735 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Saving course data to Excel
+2026-05-28 12:12:40.735 [TestNG-PoolService-1] INFO  com.hackathonProject.pages.SearchResultsPage - Saving 5 courses to Excel: src/test/resources/testdata/CourseData.xlsx
+2026-05-28 12:12:40.735 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.ExcelDataWriter - Writing 5 courses to Excel: src/test/resources/testdata/CourseData.xlsx
+2026-05-28 12:12:42.018 [TestNG-PoolService-1] INFO  com.hackathonProject.utils.ExcelDataWriter - Excel file saved: src/test/resources/testdata/CourseData.xlsx
+2026-05-28 12:12:42.028 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Excel saved successfully: src/test/resources/testdata/CourseData.xlsx
+2026-05-28 12:12:42.029 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the course data is saved to an Excel file
+2026-05-28 12:12:42.030 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Verifying search results page
+2026-05-28 12:12:42.037 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - Search results page verified. URL: https://www.coursera.org/search?query=web%20development%20courses%20for%20beginners&language=English&productDifficultyLevel=Beginner
+2026-05-28 12:12:42.038 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the search results page should be displayed
+2026-05-28 12:12:42.039 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - STEP: Asserting first course name is not empty
+2026-05-28 12:12:42.040 [TestNG-PoolService-1] INFO  com.hackathonProject.stepdefinitions.CourseSearchSteps - First course name: Web Development for Beginners
+2026-05-28 12:12:42.041 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener -    ✓ STEP PASSED: the first course name should not be empty
+2026-05-28 12:12:42.042 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - ====== SCENARIO FINISHED: Search web development courses for beginners in English and save to Excel | Status: PASSED ======
+2026-05-28 12:12:42.042 [TestNG-PoolService-1] INFO  com.hackathonProject.base.BaseClass - Quitting chrome browser on thread: TestNG-PoolService-1
+2026-05-28 12:12:45.242 [TestNG-PoolService-1] INFO  com.hackathonProject.hooks.CucumberHooks - Browser closed. Scenario teardown complete.
+2026-05-28 12:12:45.246 [TestNG-PoolService-1] INFO  com.hackathonProject.listeners.CucumberListener - ■ SCENARIO PASSED: [Search web development courses for beginners in English and save to Excel] in 110.81s
+2026-05-28 12:12:45.558 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.listeners.CucumberListener - ========================================
+2026-05-28 12:12:45.558 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.listeners.CucumberListener -   CUCUMBER TEST RUN FINISHED
+2026-05-28 12:12:45.558 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.listeners.CucumberListener - ========================================
+2026-05-28 12:12:45.617 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.utils.ExtentReportManager - Extent Reports flushed to disk
+2026-05-28 12:12:45.617 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.listeners.CucumberListener - Extent Reports flushed successfully
+2026-05-28 12:12:45.620 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.listeners.CucumberListener - Report archived: reports/cucumber/cucumber-report_2026-05-28_12-11-01.html
+2026-05-28 12:12:45.622 [TestNG-test-CourseraTests-1] INFO  com.hackathonProject.listeners.CucumberListener - Report archived: reports/cucumber/cucumber-report_2026-05-28_12-11-01.json

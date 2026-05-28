@@ -1,3 +1,6 @@
+// It listens to Cucumber's event bus and reacts to things happening during the
+// test run — scenario started, step finished, scenario finished, run finished.
+
 package com.hackathonProject.listeners;
 
 import io.cucumber.plugin.ConcurrentEventListener;
@@ -16,6 +19,7 @@ public class CucumberListener implements ConcurrentEventListener {
 
     @Override
     public void setEventPublisher(EventPublisher publisher) {
+        //when this happens - call this method
         publisher.registerHandlerFor(TestCaseStarted.class, this::onScenarioStart);
         publisher.registerHandlerFor(TestStepFinished.class, this::onStepFinished);
         publisher.registerHandlerFor(TestCaseFinished.class, this::onScenarioFinished);
@@ -23,8 +27,8 @@ public class CucumberListener implements ConcurrentEventListener {
     }
 
     private void onScenarioStart(TestCaseStarted event) {
-        String scenarioName = event.getTestCase().getName();
-        String uri = event.getTestCase().getUri().toString();
+        String scenarioName = event.getTestCase().getName();  //scenario name
+        String uri = event.getTestCase().getUri().toString(); //path to .feature file
         logger.info("▶ SCENARIO STARTED: [" + scenarioName + "] in [" + uri + "]");
     }
 
@@ -76,7 +80,7 @@ public class CucumberListener implements ConcurrentEventListener {
 
         // Flush Extent Reports
         try {
-            com.hackathonProject.utils.ExtentReportManager.flushReports();
+            com.hackathonProject.utils.ExtentReportManager.flushReports(); //write Extent HTML to disk
             logger.info("Extent Reports flushed successfully");
         } catch (Exception e) {
             logger.error("Could not flush Extent Reports: " + e.getMessage());
@@ -86,6 +90,7 @@ public class CucumberListener implements ConcurrentEventListener {
         archiveCucumberReports();
     }
 
+    // Every run overwrites cucumber-report.html; Copying it with a timestamp preserves history
     private void archiveCucumberReports() {
         String timestamp = com.hackathonProject.utils.ExtentReportManager.getTimestamp();
 

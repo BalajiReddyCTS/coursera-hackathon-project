@@ -911,6 +911,9 @@ public void theFirstCourseNameShouldNotBeEmpty() {
 
 The key: `softAssert.assertAll()` is called **only at the last step** of each scenario, after all soft asserts have been recorded.
 
+**Known risk — hard exception before the last step:**
+If any step before the last one throws a hard exception (e.g. `NullPointerException`, `NoSuchElementException`), Cucumber marks that step as failed and skips all remaining steps. The last step — where `assertAll()` lives — never runs, and all accumulated soft-assert failures are **silently lost**. The safer pattern is to call `softAssert.assertAll()` inside the `@After` hook so it fires unconditionally regardless of what happened during the scenario.
+
 #### DataTable
 
 ```java
@@ -1021,6 +1024,24 @@ Every Course Search scenario needs the home page open first. Putting it in `Back
 - `@Smoke` — fast critical-path tests, run on every commit
 - `@CourseSearch`, `@LanguageLearning`, `@EnterpriseForm` — feature-specific filters
 
+**Tag inheritance:**
+A tag placed on `Feature` is automatically inherited by every `Scenario` inside that file. In this project, `@LanguageLearning` appears on both the `Feature` and the `Scenario` — the scenario-level tag is redundant. Cucumber treats duplicates as a set and ignores them, so it does not cause errors, but the clean approach is:
+- Tag only the `Feature` when every scenario in the file belongs to the same group (scenarios inherit it automatically).
+- Tag only the `Scenario` when scenarios within the same file need different tags.
+
+**Tag expression syntax (Cucumber 7):**
+Cucumber 7 uses the Tag Expression standard. Comma-separated lists are **not** valid — use `or`, `and`, `not`:
+
+| Intent | Correct syntax |
+|--------|---------------|
+| Either tag | `@Smoke or @Regression` |
+| Both tags | `@Smoke and @Regression` |
+| Exclude a tag | `@Smoke and not @WIP` |
+| Grouping | `(@Smoke or @Regression) and not @WIP` |
+
+In `@CucumberOptions`: `tags = "@Smoke or @Regression"`.
+On the command line: `-Dcucumber.filter.tags="@Smoke or @Regression"`.
+
 ---
 
 ## 8. Maven Build Configuration
@@ -1116,6 +1137,12 @@ We use only:
 | `instances` | Each instance of a class on its own thread |
 
 We use `classes` because each Cucumber scenario becomes an "instance" of TestRunner via the parallel data provider.
+
+**`verbose="1"` — Console output level:**
+Controls how much TestNG itself prints to the console — not your Log4j2 or Cucumber logs, only TestNG's own messages. `1` shows just the final summary (suite name, pass/fail counts). Higher values (2–5) add method names and `@Before*`/`@After*` calls; `10` is maximum verbosity. The attribute is optional — omitting it defaults to `0`. It has no effect on your step-level logging.
+
+**`preserve-order="true"` — Execution order:**
+Runs `<classes>` and `<test>` blocks in the exact sequence they appear in the XML file. In this project it has no practical effect because there is only one `<test>` block containing one `<class>`. It becomes relevant when multiple `<test>` blocks or `<class>` entries are defined and a specific run sequence is required.
 
 ---
 
@@ -1292,7 +1319,7 @@ if (scenario.isFailed()) {
 | **Collections — Map** | Language -> count mapping via `LinkedHashMap` (preserves insertion order) |
 | **Collections — Set** | `seen.add(name)` returns false on duplicates; deduplication idiom |
 | **Regex** | `Pattern.compile()` in SearchResultsPage and LanguageCoursesPage |
-| **String formatting** | `String.format("%-25s -> %d courses", lang, count)` |
+| **String formatting** | `String.format("%-25s -> %d courses", lang, count)` — note: the source code uses `→` (Unicode arrow U+2192); on Windows terminals not configured for UTF-8, this renders as `?`. Fix by replacing `→` with `->` in `LanguageLearningSteps.java` or adding `-Dfile.encoding=UTF-8` to Surefire's `<argLine>` in `pom.xml`. |
 | **Synchronization** | `synchronized` keyword in `ExtentReportManager.getExtentReports()` |
 | **Thread safety** | `ThreadLocal` everywhere driver state lives |
 | **Enum/Switch** | Switch on `result.getStatus()` in CucumberListener |
@@ -1454,7 +1481,7 @@ if (scenario.isFailed()) {
 
 ### Prerequisites
 
-- Java 11+ installed and `JAVA_HOME` set
+- Java 25+ installed and `JAVA_HOME` set
 - Maven 3.6+ on `PATH`
 - Chrome or Edge installed
 - Internet access (tests hit live Coursera site)

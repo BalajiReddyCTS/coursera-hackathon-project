@@ -22,11 +22,11 @@
         <selenium.version>4.18.1</selenium.version>
         <testng.version>7.9.0</testng.version>
         <cucumber.version>7.15.0</cucumber.version>
-        <webdrivermanager.version>5.7.0</webdrivermanager.version>
-        <apache.poi.version>5.2.5</apache.poi.version>
+        <webdrivermanager.version>6.1.0</webdrivermanager.version>
+        <apache.poi.version>5.4.0</apache.poi.version>
         <extentreports.version>5.1.1</extentreports.version>
         <allure.version>2.25.0</allure.version>
-        <log4j.version>2.22.0</log4j.version>
+        <log4j.version>2.25.4</log4j.version>
     </properties>
 
     <!-- ===== Dependencies ===== -->
@@ -40,6 +40,7 @@
         </dependency>
 
         <!-- WebDriverManager -->
+        <!--suppress VulnerableLibrariesLocal -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
@@ -139,6 +140,7 @@
             </plugin>
 
             <!-- Surefire (TestNG + Cucumber execution) -->
+            <!-- points to testng.xml-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>

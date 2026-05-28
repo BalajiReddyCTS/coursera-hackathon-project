@@ -45,7 +45,7 @@ public class LanguageLearningSteps {
         StringBuilder sb = new StringBuilder("\n===== LANGUAGES EXTRACTED =====\n");
         if (extractedLanguages != null) {
             extractedLanguages.forEach((lang, count) ->
-                sb.append(String.format("  %-25s → %d courses%n", lang, count)));
+                sb.append(String.format("  %-25s -> %d courses%n", lang, count))); //lang as a String, left-aligned, padded to 25 chars
         }
         sb.append("================================");
 
@@ -69,7 +69,7 @@ public class LanguageLearningSteps {
         StringBuilder sb = new StringBuilder("\n===== LEVELS EXTRACTED =====\n");
         if (extractedLevels != null) {
             extractedLevels.forEach((level, count) ->
-                sb.append(String.format("  %-25s → %d courses%n", level, count)));
+                sb.append(String.format("  %-25s -> %d courses%n", level, count)));
         }
         sb.append("============================");
 

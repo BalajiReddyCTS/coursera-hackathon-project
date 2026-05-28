@@ -22,7 +22,7 @@ All three scenarios are tagged `@Smoke`, and `TestRunner` filters on that tag.
 
 | Tool | Version | Purpose |
 |------|---------|---------|
-| Java | 11 | Language / compile target |
+| Java | 25 | Language / compile target |
 | Maven | 3.6+ | Build & dependency management |
 | Selenium WebDriver | 4.18.1 | Browser automation |
 | WebDriverManager | 5.7.0 | Auto-downloads Chrome/Firefox drivers |
@@ -41,7 +41,7 @@ All three scenarios are tagged `@Smoke`, and `TestRunner` filters on that tag.
 
 ## Prerequisites
 
-- Java 11+ (`java -version`)
+- Java 25+ (`java -version`)
 - Maven 3.6+ (`mvn -version`)
 - Chrome **or** Microsoft Edge installed (Edge is the default)
 - Internet connection (tests run against the live Coursera site)
@@ -201,3 +201,7 @@ Allure HTML can't be opened by double-clicking the file because it loads JSON vi
 - **Edge needs a unique profile per thread** — set automatically in `BaseClass` using `java.io.tmpdir` + thread id + timestamp. Without this, parallel Edge sessions share user data and intermittently fail.
 - **Wait strategy:** zero `Thread.sleep` anywhere; only `WebDriverWait` and `FluentWait` (see `WaitUtil`).
 - **Reports are timestamped** so reruns don't overwrite history.
+- **Tag inheritance:** a tag on `Feature` is automatically inherited by every `Scenario` inside it. Repeating the same tag on the `Scenario` is redundant but harmless — Cucumber treats duplicates as a set.
+- **Tag expression syntax (Cucumber 7):** use `or`, `and`, `not` — comma-separated lists are **not** valid. Example: `tags = "@Smoke or @Regression"`, not `"@Smoke, @Regression"`.
+- **SoftAssert risk:** `assertAll()` is called only at the last step of each scenario. If a hard exception (e.g. `NullPointerException`) is thrown in an earlier step, Cucumber skips remaining steps and `assertAll()` never runs — accumulated soft-assert failures are silently lost. Mitigation: call `softAssert.assertAll()` inside the `@After` hook so it always fires.
+- **Console encoding:** the `→` character in `String.format` output may display as `?` on Windows terminals that are not UTF-8 encoded. Fix by replacing `→` with the ASCII `->` in `LanguageLearningSteps.java`, or add `-Dfile.encoding=UTF-8` to the Surefire `<argLine>` in `pom.xml`.

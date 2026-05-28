@@ -19,7 +19,7 @@ public class ConfigReader {
             // Path relative to project root
             String configPath = "src/main/resources/config/config.properties";
             FileInputStream fis = new FileInputStream(configPath);
-            properties.load(fis);
+            properties.load(fis); // Reads a property list (key and element pairs) from the input byte stream
             fis.close();
             logger.info("config.properties loaded successfully");
         } catch (IOException e) {

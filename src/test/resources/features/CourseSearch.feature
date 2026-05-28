@@ -12,7 +12,7 @@ Feature: Course Search - Web Development Courses
   Background:
     Given the user is on the Coursera home page
 
-  @Smoke @CourseSearch
+  @Smoke
   Scenario: Search web development courses for beginners in English and save to Excel
     When the user searches for "web development courses for beginners"
     And the user applies the language filter "English"
