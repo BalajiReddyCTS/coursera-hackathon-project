@@ -71,9 +71,14 @@ public class ExtentReportManager {
     public static void attachScreenshot(String screenshotPath) {
         if (extentTest.get() != null && screenshotPath != null && !screenshotPath.isEmpty()) {
             try {
-                extentTest.get().addScreenCaptureFromPath(screenshotPath, "Screenshot");
+                // Read the screenshot file and encode as Base64
+                // This embeds the image directly in the HTML report
+                // avoids broken image links caused by absolute/relative path issues
+                byte[] fileContent = java.nio.file.Files.readAllBytes(java.nio.file.Paths.get(screenshotPath));
+                String base64 = java.util.Base64.getEncoder().encodeToString(fileContent);
+                extentTest.get().addScreenCaptureFromBase64String(base64, "Screenshot");
             } catch (Exception e) {
-                logger.warn("Could not attach screenshot: " + e.getMessage());
+                logger.warn("Could not attach screenshot to Extent: " + e.getMessage());
             }
         }
     }

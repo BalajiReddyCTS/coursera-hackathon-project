@@ -20,9 +20,21 @@ public class SearchResultsPage {
 
     private static final Logger logger = LogManager.getLogger(SearchResultsPage.class);
 
+    // Matches full rating string e.g. "4.8 · 12,345 reviews" or "4.8 · 2K reviews"
+    // Group 1 captures the rating digit (e.g. "4.8")
     private static final Pattern RATING_PATTERN = Pattern.compile("(\\d\\.\\d)\\s*·\\s*[\\d.,]+[Kk]?\\s*reviews?");
+
+    // Fallback when review count is absent — matches any X.X number between 1.0 and 5.9
+    // \\b = word boundary ensures no partial match (e.g. won't match "14.8")
+    // Group 1 captures the rating digit (e.g. "4.8")
     private static final Pattern RATING_FALLBACK = Pattern.compile("\\b([1-5]\\.\\d)\\b");
+
+    // Matches duration range e.g. "3-6 Months", "10-20 Hours", "1-2 Weeks"
+    // (?:...) = non-capturing group for the unit — Week/Weeks, Month/Months, Hour/Hours
+    // Group 1 captures the full duration string (e.g. "3-6 Months")
     private static final Pattern DURATION_PATTERN = Pattern.compile("(\\d+\\s*-\\s*\\d+\\s*(?:Weeks?|Months?|Hours?))");
+
+    // Provider/platform names to skip when extracting the course name from card text
     private static final Set<String> SKIP_NAMES = Set.of("IBM", "Meta", "Google", "Microsoft", "Coursera");
 
     private static final By COURSE_CARDS = By.xpath(
